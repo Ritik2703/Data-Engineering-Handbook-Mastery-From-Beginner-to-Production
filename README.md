@@ -46,8 +46,8 @@ Fundamentals → SQL → Python → Databases → ETL/ELT → Orchestration
 
 ## 🚀 Quick Start
 ```bash
-git clone https://github.com/<your-username>/data-engineering-golden-repo.git
-cd data-engineering-golden-repo
+git clone [https://github.com/<your-username>/Data-Engineering-Handbook-Mastery-From-Beginner-to-Production.git]
+cd Data-Engineering-Handbook-Mastery-From-Beginner-to-Production
 pip install -r requirements.txt   # per-folder requirements where relevant
 ```
 
