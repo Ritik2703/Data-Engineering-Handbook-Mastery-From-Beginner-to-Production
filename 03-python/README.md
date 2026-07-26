@@ -1,61 +1,45 @@
-# 03 — Python for Data Engineering
+# 03 — Python for Data Engineers: Zero to Enterprise-Production
 
-## Files
-- [`api-to-db/rest_api_to_postgres.py`](./api-to-db/rest_api_to_postgres.py) — paginated API pull with retry, incremental watermark, bulk upsert
-- [`api-to-db/db_connect_examples.py`](./api-to-db/db_connect_examples.py) — connection snippets for Postgres, MySQL, MongoDB, Snowflake, Oracle, Redshift, SQL Server
+Written so someone who has **never written a line of Python** can work through this and come out able to build/debug real production data pipelines used at product companies — API pulls, cloud SDKs, database connections, file processing, data quality checks, all with proper error handling.
 
-## Pandas — Common ETL Operations
-```python
-import pandas as pd
+> 🗂️ Want everything in ONE file to reference quickly? See [`MASTER_LIBRARY_REFERENCE.py`](./MASTER_LIBRARY_REFERENCE.py) — every library, every use case, one place.
 
-df = pd.read_csv("orders.csv")
+## 📖 Learning Path
 
-# Clean
-df = df.drop_duplicates(subset=["order_id"])
-df["amount"] = pd.to_numeric(df["amount"], errors="coerce")
-df = df.dropna(subset=["amount"])
+| # | File | Level | Covers |
+|---|---|---|---|
+| 1 | [`01-python-fundamentals-for-de.md`](./01-python-fundamentals-for-de.md) | Beginner | Variables, data structures, functions, decorators, generators, context managers, OOP |
+| 2 | [`02-error-handling.md`](./02-error-handling.md) | Beginner-Intermediate | try/except/else/finally, custom exceptions, retries, logging |
+| 3 | [`03-file-handling-all-formats.md`](./03-file-handling-all-formats.md) | Intermediate | CSV, JSON, Excel, Parquet, XML, YAML, text, compressed files |
+| 4 | [`04-pandas-for-data-engineers.md`](./04-pandas-for-data-engineers.md) | Intermediate | pandas for ETL: cleaning, merging, reshaping, performance |
+| 5 | [`05-database-connectivity.md`](./05-database-connectivity.md) | Intermediate | Every major DB, connection pooling, bulk operations |
+| 6 | [`06-rest-api-integration.md`](./06-rest-api-integration.md) | Intermediate-Advanced | requests, auth types, pagination, retry/backoff, rate limits |
+| 7 | [`07-cloud-sdk-aws-boto3.md`](./07-cloud-sdk-aws-boto3.md) | Advanced | boto3: S3, Glue, Redshift, Lambda, Secrets Manager |
+| 8 | [`08-cloud-sdk-azure.md`](./08-cloud-sdk-azure.md) | Advanced | Azure SDK: Blob/ADLS, Key Vault, Data Factory triggers |
+| 9 | [`09-cloud-sdk-gcp.md`](./09-cloud-sdk-gcp.md) | Advanced | GCP SDK: BigQuery, Cloud Storage, Secret Manager |
+| 10 | [`10-sharepoint-graph-api-integration.md`](./10-sharepoint-graph-api-integration.md) | Advanced | Microsoft Graph API: SharePoint, Teams, Outlook, Users |
+| 11 | [`11-pyspark-for-python-developers.md`](./11-pyspark-for-python-developers.md) | Advanced | PySpark from a Python-dev lens |
+| 12 | [`12-data-quality-validation.md`](./12-data-quality-validation.md) | Advanced | Great Expectations, Pandera, custom validation frameworks |
+| 13 | [`13-production-best-practices.md`](./13-production-best-practices.md) | Production | Logging, config management, testing, packaging, CI/CD |
+| — | [`case-studies/`](./case-studies/) | Production | Full real-company-style end-to-end scripts |
+| — | [`MASTER_LIBRARY_REFERENCE.py`](./MASTER_LIBRARY_REFERENCE.py) | Reference | Every library + use case in one runnable-structure file |
 
-# Transform
-df["order_month"] = pd.to_datetime(df["order_date"]).dt.to_period("M")
-summary = df.groupby(["order_month", "region"])["amount"].sum().reset_index()
-
-# Merge (like SQL join)
-customers = pd.read_csv("customers.csv")
-merged = df.merge(customers, on="customer_id", how="left")
-
-# Load
-merged.to_parquet("output/orders_enriched.parquet", index=False)
+## 🧠 Suggested Path (never coded before → production-ready)
+```
+Week 1: 01-fundamentals + 02-error-handling      (get comfortable with Python itself)
+Week 2: 03-file-handling + 04-pandas             (data manipulation core skills)
+Week 3: 05-database-connectivity + 06-rest-api   (moving data in/out of systems)
+Week 4: 07/08/09-cloud SDKs (pick your target cloud first, others for breadth)
+Week 5: 10-sharepoint-graph-api + 11-pyspark
+Week 6: 12-data-quality + 13-production-best-practices
+Ongoing: case-studies/ + MASTER_LIBRARY_REFERENCE.py for quick lookup
 ```
 
-## PySpark — Distributed Processing
-```python
-from pyspark.sql import SparkSession
-from pyspark.sql import functions as F
-
-spark = SparkSession.builder.appName("etl-job").getOrCreate()
-
-df = spark.read.option("header", True).csv("s3a://bucket/raw/orders/")
-
-cleaned = (
-    df.dropDuplicates(["order_id"])
-      .withColumn("amount", F.col("amount").cast("double"))
-      .filter(F.col("amount").isNotNull())
-)
-
-agg = (
-    cleaned.groupBy("region", F.date_trunc("month", "order_date").alias("month"))
-           .agg(F.sum("amount").alias("total_sales"))
-)
-
-agg.write.mode("overwrite").partitionBy("month").parquet("s3a://bucket/curated/sales_summary/")
-```
-
-## Why Python for DE?
-- Glue code between every system: APIs, DBs, cloud SDKs (boto3, azure-sdk, google-cloud)
-- pandas → in-memory transforms (small-medium data)
-- PySpark → distributed transforms (big data)
-- Airflow/dbt/Dagster are all Python-based orchestration
-
-## Resources
-- Real Python: https://realpython.com/
-- PySpark docs: https://spark.apache.org/docs/latest/api/python/
+## 🎯 What makes this "enterprise-level"
+Every code example in this module follows the same production discipline:
+- **Explicit error handling** — no bare `except:`, specific exceptions caught, meaningful messages
+- **Resource cleanup** — `finally` blocks / context managers (`with`) so connections/files always close
+- **Retry logic** — network calls assume failure will happen and handle it gracefully
+- **Logging, not print()** — production code logs with levels (INFO/WARNING/ERROR), not `print()` statements
+- **Credentials never hardcoded** — environment variables / secrets managers, always
+- **Real company scenario framing** — every concept tied to why a product company actually needs it
