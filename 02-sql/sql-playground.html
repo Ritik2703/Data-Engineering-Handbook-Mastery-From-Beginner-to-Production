@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SQL Playground — E-commerce Sandbox</title>
+<style>
+  :root{
+    --bg: #0d1117;
+    --panel: #12181f;
+    --panel-alt: #161d26;
+    --border: #232b36;
+    --text: #d8e0ea;
+    --text-dim: #7c8896;
+    --accent: #3ecf8e;
+    --accent-dim: #1f6b4d;
+    --amber: #e0a458;
+    --error: #e0645c;
+    --mono: "JetBrains Mono","Fira Code",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;height:100%;background:var(--bg);color:var(--text);font-family:var(--mono);}
+  body{display:flex;flex-direction:column;min-height:100vh;}
+
+  header{
+    padding:18px 24px;border-bottom:1px solid var(--border);
+    display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;
+  }
+  header h1{font-size:15px;margin:0;letter-spacing:.04em;color:var(--accent);text-transform:uppercase;}
+  header p{margin:0;font-size:12px;color:var(--text-dim);}
+
+  .layout{display:flex;flex:1;min-height:0;}
+  .sidebar{
+    width:260px;flex-shrink:0;border-right:1px solid var(--border);
+    background:var(--panel);padding:16px;overflow-y:auto;
+  }
+  .sidebar h2{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--text-dim);margin:0 0 10px;}
+  .table-block{margin-bottom:16px;border:1px solid var(--border);border-radius:6px;overflow:hidden;}
+  .table-name{background:var(--panel-alt);padding:6px 10px;font-size:12.5px;color:var(--amber);font-weight:600;}
+  .table-cols{padding:8px 10px;font-size:11.5px;color:var(--text-dim);line-height:1.6;}
+  .table-cols b{color:var(--text);font-weight:500;}
+
+  .scenario-btn{
+    display:block;width:100%;text-align:left;background:var(--panel-alt);
+    border:1px solid var(--border);color:var(--text);font-family:var(--mono);
+    font-size:11.5px;padding:8px 10px;border-radius:5px;margin-bottom:6px;cursor:pointer;
+    transition:border-color .15s;
+  }
+  .scenario-btn:hover{border-color:var(--accent-dim);color:var(--accent);}
+
+  .main{flex:1;display:flex;flex-direction:column;min-width:0;}
+  .editor-wrap{padding:16px 20px;border-bottom:1px solid var(--border);}
+  .editor-label{font-size:11px;color:var(--text-dim);margin-bottom:8px;text-transform:uppercase;letter-spacing:.06em;}
+  textarea{
+    width:100%;height:120px;background:var(--panel);border:1px solid var(--border);
+    border-radius:6px;color:var(--text);font-family:var(--mono);font-size:13.5px;
+    padding:12px 14px;resize:vertical;outline:none;line-height:1.5;
+  }
+  textarea:focus{border-color:var(--accent-dim);}
+
+  .controls{display:flex;gap:10px;margin-top:10px;align-items:center;}
+  button.run{
+    background:var(--accent);color:#06110c;border:none;font-family:var(--mono);
+    font-weight:700;font-size:12.5px;padding:9px 18px;border-radius:5px;cursor:pointer;
+    letter-spacing:.03em;
+  }
+  button.run:hover{background:#4fe0a1;}
+  button.run:disabled{background:var(--border);color:var(--text-dim);cursor:not-allowed;}
+  .status{font-size:11.5px;color:var(--text-dim);}
+  .status.error{color:var(--error);}
+  .status.ok{color:var(--accent);}
+
+  .results-wrap{flex:1;overflow:auto;padding:16px 20px;}
+  table.result{border-collapse:collapse;width:100%;font-size:12.5px;}
+  table.result th{
+    background:var(--panel-alt);color:var(--amber);text-align:left;
+    padding:8px 12px;border-bottom:1px solid var(--border);position:sticky;top:0;
+    white-space:nowrap;
+  }
+  table.result td{padding:7px 12px;border-bottom:1px solid #1a212b;color:var(--text);white-space:nowrap;}
+  table.result tr:hover td{background:#141b23;}
+  .placeholder{color:var(--text-dim);font-size:12.5px;padding:8px 0;}
+  .row-count{color:var(--text-dim);font-size:11px;margin-top:10px;}
+
+  footer{border-top:1px solid var(--border);padding:10px 24px;font-size:11px;color:var(--text-dim);}
+  a{color:var(--accent);}
+  ::-webkit-scrollbar{width:9px;height:9px;}
+  ::-webkit-scrollbar-thumb{background:#263041;border-radius:5px;}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>▸ SQL Playground</h1>
+  <p>In-browser SQLite sandbox — practice every concept from the 02-sql module against a live e-commerce dataset. Nothing leaves your browser.</p>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <h2>Schema</h2>
+    <div id="schema-list"></div>
+
+    <h2 style="margin-top:20px;">Try a Scenario</h2>
+    <button class="scenario-btn" data-sql="SELECT * FROM customers;">1. Show all customers</button>
+    <button class="scenario-btn" data-sql="SELECT c.name, o.order_id, o.amount&#10;FROM customers c&#10;LEFT JOIN orders o ON c.customer_id = o.customer_id&#10;WHERE o.order_id IS NULL;">2. Customers who never ordered (LEFT JOIN)</button>
+    <button class="scenario-btn" data-sql="SELECT category, SUM(price*quantity) AS total_sales&#10;FROM order_items oi&#10;JOIN products p ON oi.product_id = p.product_id&#10;GROUP BY category&#10;ORDER BY total_sales DESC;">3. Revenue per category (GROUP BY)</button>
+    <button class="scenario-btn" data-sql="SELECT customer_id, order_id, order_date, amount,&#10;  RANK() OVER (PARTITION BY customer_id ORDER BY amount DESC) AS rnk&#10;FROM orders;">4. Rank orders per customer (Window Fn)</button>
+    <button class="scenario-btn" data-sql="WITH ranked AS (&#10;  SELECT *, ROW_NUMBER() OVER (PARTITION BY customer_id ORDER BY order_date DESC) AS rn&#10;  FROM orders&#10;)&#10;SELECT * FROM ranked WHERE rn = 1;">5. Latest order per customer (CTE)</button>
+    <button class="scenario-btn" data-sql="SELECT customer_id,&#10;  SUM(amount) OVER (PARTITION BY customer_id ORDER BY order_date) AS running_total&#10;FROM orders&#10;ORDER BY customer_id, order_date;">6. Running total (Window Fn)</button>
+    <button class="scenario-btn" data-sql="SELECT * FROM products&#10;WHERE price > (SELECT AVG(price) FROM products);">7. Above-average priced products (Subquery)</button>
+  </aside>
+
+  <main class="main">
+    <div class="editor-wrap">
+      <div class="editor-label">Query Editor</div>
+      <textarea id="sql-input" spellcheck="false">SELECT * FROM customers;</textarea>
+      <div class="controls">
+        <button class="run" id="run-btn">▶ Run Query (Ctrl+Enter)</button>
+        <span class="status" id="status">Loading engine…</span>
+      </div>
+    </div>
+    <div class="results-wrap">
+      <div id="results"><div class="placeholder">Results will appear here after you run a query.</div></div>
+    </div>
+  </main>
+</div>
+
+<footer>
+  Powered by <a href="https://sql.js.org" target="_blank" rel="noopener">sql.js</a> (SQLite compiled to WebAssembly) — runs entirely client-side, no server or account needed.
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.3/sql-wasm.js"></script>
+<script>
+const schema = {
+  customers: ["customer_id (PK)", "name", "city", "signup_date"],
+  products: ["product_id (PK)", "product_name", "category", "price"],
+  orders: ["order_id (PK)", "customer_id (FK)", "order_date", "status", "amount"],
+  order_items: ["order_item_id (PK)", "order_id (FK)", "product_id (FK)", "quantity", "unit_price"]
+};
+
+const schemaList = document.getElementById('schema-list');
+for (const [table, cols] of Object.entries(schema)) {
+  const block = document.createElement('div');
+  block.className = 'table-block';
+  block.innerHTML = `<div class="table-name">${table}</div><div class="table-cols">${cols.map(c=>{
+    const parts = c.split(' (');
+    return parts.length>1 ? `<b>${parts[0]}</b> (${parts[1]}` : `<b>${c}</b>`;
+  }).join('<br>')}</div>`;
+  schemaList.appendChild(block);
+}
+
+let db;
+const statusEl = document.getElementById('status');
+const runBtn = document.getElementById('run-btn');
+const input = document.getElementById('sql-input');
+const resultsEl = document.getElementById('results');
+
+initSqlJs({ locateFile: file => `https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.3/${file}` })
+  .then(SQL => {
+    db = new SQL.Database();
+    seedData();
+    statusEl.textContent = 'Ready — sample e-commerce data loaded';
+    statusEl.className = 'status ok';
+    runBtn.disabled = false;
+    runQuery(); // run default query
+  })
+  .catch(err => {
+    statusEl.textContent = 'Failed to load SQL engine: ' + err.message;
+    statusEl.className = 'status error';
+  });
+
+runBtn.disabled = true;
+
+function seedData(){
+  db.run(`
+    CREATE TABLE customers (customer_id INTEGER PRIMARY KEY, name TEXT, city TEXT, signup_date TEXT);
+    CREATE TABLE products (product_id INTEGER PRIMARY KEY, product_name TEXT, category TEXT, price REAL);
+    CREATE TABLE orders (order_id INTEGER PRIMARY KEY, customer_id INTEGER, order_date TEXT, status TEXT, amount REAL);
+    CREATE TABLE order_items (order_item_id INTEGER PRIMARY KEY, order_id INTEGER, product_id INTEGER, quantity INTEGER, unit_price REAL);
+
+    INSERT INTO customers VALUES
+      (1,'Rahul Sharma','Bangalore','2025-01-15'),
+      (2,'Priya Nair','Mumbai','2025-02-20'),
+      (3,'Amit Verma','Delhi','2025-03-05'),
+      (4,'Sneha Iyer','Bangalore','2025-04-11'),
+      (5,'Karan Mehta','Pune','2025-05-30'),
+      (6,'Divya Reddy','Hyderabad','2025-06-18');
+
+    INSERT INTO products VALUES
+      (101,'Wireless Mouse','Electronics',699),
+      (102,'Mechanical Keyboard','Electronics',2999),
+      (103,'Running Shoes','Footwear',3499),
+      (104,'Yoga Mat','Fitness',899),
+      (105,'Bluetooth Speaker','Electronics',1999),
+      (106,'Office Chair','Furniture',6999);
+
+    INSERT INTO orders VALUES
+      (1001,1,'2026-06-01','delivered',3698),
+      (1002,1,'2026-07-10','delivered',699),
+      (1003,2,'2026-06-15','delivered',3499),
+      (1004,3,'2026-07-01','pending',6999),
+      (1005,4,'2026-07-20','delivered',2898),
+      (1006,2,'2026-07-22','delivered',899),
+      (1007,5,'2026-05-10','cancelled',1999);
+
+    INSERT INTO order_items VALUES
+      (1,1001,102,1,2999),
+      (2,1001,101,1,699),
+      (3,1002,101,1,699),
+      (4,1003,103,1,3499),
+      (5,1004,106,1,6999),
+      (6,1005,105,1,1999),
+      (7,1005,104,1,899),
+      (8,1006,104,1,899),
+      (9,1007,105,1,1999);
+  `);
+}
+
+function runQuery(){
+  const sql = input.value.trim();
+  if(!sql){ return; }
+  try {
+    const res = db.exec(sql);
+    renderResults(res);
+    statusEl.textContent = 'Query executed successfully';
+    statusEl.className = 'status ok';
+  } catch(err){
+    resultsEl.innerHTML = `<div class="placeholder" style="color:var(--error);">Error: ${escapeHtml(err.message)}</div>`;
+    statusEl.textContent = 'Query failed';
+    statusEl.className = 'status error';
+  }
+}
+
+function renderResults(res){
+  if(!res || res.length === 0){
+    resultsEl.innerHTML = '<div class="placeholder">Query ran successfully — no rows returned (e.g., an INSERT/CREATE, or a SELECT with no matches).</div>';
+    return;
+  }
+  const { columns, values } = res[0];
+  let html = '<table class="result"><thead><tr>' + columns.map(c=>`<th>${escapeHtml(c)}</th>`).join('') + '</tr></thead><tbody>';
+  for(const row of values){
+    html += '<tr>' + row.map(v => `<td>${v === null ? '<span style="color:#555">NULL</span>' : escapeHtml(String(v))}</td>`).join('') + '</tr>';
+  }
+  html += '</tbody></table>';
+  resultsEl.innerHTML = html;
+  const countDiv = document.createElement('div');
+  countDiv.className = 'row-count';
+  countDiv.textContent = `${values.length} row${values.length !== 1 ? 's' : ''} returned`;
+  resultsEl.appendChild(countDiv);
+}
+
+function escapeHtml(str){
+  return str.replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+}
+
+runBtn.addEventListener('click', runQuery);
+input.addEventListener('keydown', e => {
+  if((e.ctrlKey || e.metaKey) && e.key === 'Enter'){ runQuery(); }
+});
+document.querySelectorAll('.scenario-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    input.value = btn.getAttribute('data-sql');
+    runQuery();
+  });
+});
+</script>
+</body>
+</html>
