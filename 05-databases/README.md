@@ -1,41 +1,34 @@
-# 05 — Databases
+# 05 — Databases: The Complete A-to-Z (Beginner to Pro, World-Class Level)
 
-Connection code examples already covered in [`03-python/api-to-db/db_connect_examples.py`](../03-python/api-to-db/db_connect_examples.py). This section covers **when to use what**.
+The most comprehensive database module in this repo — history and evolution, every database type, internals (how they actually work under the hood), design methodology, real production company choices, and interview-ready depth. Someone with zero database knowledge should finish this able to design a database, explain WHY a company picked a specific database, and reason about scaling/consistency tradeoffs like a senior engineer.
 
-## Relational (OLTP)
-| DB | Best For | Notes |
-|---|---|---|
-| PostgreSQL | General purpose, JSONB support | Open-source favorite, great extensions (PostGIS) |
-| MySQL | Web apps | Simpler, huge community |
-| SQL Server | Microsoft-stack enterprises | Strong with SSIS/Power BI integration |
-| Oracle | Legacy large enterprises (banking) | Expensive licensing, very mature |
+## 📖 Learning Path
 
-## NoSQL
-| DB | Type | Best For |
-|---|---|---|
-| MongoDB | Document | Flexible schema, nested JSON data |
-| Cassandra | Wide-column | High write throughput, multi-datacenter |
-| DynamoDB | Key-value/Document | Serverless AWS-native, single-digit ms latency |
-| Redis | In-memory KV | Caching, session store, real-time counters |
-
-## Data Warehouses (OLAP / Cloud-native)
-| DW | Cloud | Pricing Model | Notes |
+| # | File | Level | Covers |
 |---|---|---|---|
-| Snowflake | Multi-cloud | Compute (per-second) + storage separate | Best-in-class separation of storage/compute |
-| BigQuery | GCP | Pay-per-query (per TB scanned) or flat-rate | Serverless, no cluster management |
-| Redshift | AWS | Cluster-based (or Serverless) | Deep AWS ecosystem integration |
-| Synapse Analytics | Azure | Cluster/serverless | Combines DW + Spark in one workspace |
+| 1 | [`01-database-fundamentals-and-history.md`](./01-database-fundamentals-and-history.md) | Beginner | What a database is, decade-by-decade evolution 1970s-2026 |
+| 2 | [`02-relational-databases-deep-dive.md`](./02-relational-databases-deep-dive.md) | Beginner-Intermediate | RDBMS internals, ACID, normalization, storage engines |
+| 3 | [`03-nosql-databases-deep-dive.md`](./03-nosql-databases-deep-dive.md) | Intermediate | Document/Key-Value/Wide-Column/Graph, CAP theorem in practice |
+| 4 | [`04-newsql-distributed-sql.md`](./04-newsql-distributed-sql.md) | Advanced | CockroachDB, Google Spanner, TiDB, YugabyteDB — the "best of both" era |
+| 5 | [`05-cloud-native-databases.md`](./05-cloud-native-databases.md) | Advanced | Aurora, Cosmos DB, Spanner, serverless databases |
+| 6 | [`06-vector-databases-ai-era.md`](./06-vector-databases-ai-era.md) | Advanced, Cutting-Edge | pgvector, Pinecone, Weaviate — the newest category (RAG/AI era) |
+| 7 | [`07-database-design-and-modeling.md`](./07-database-design-and-modeling.md) | Intermediate-Advanced | Full schema design walkthrough, normalization vs denormalization decisions |
+| 8 | [`08-indexing-storage-internals.md`](./08-indexing-storage-internals.md) | Advanced | B-Tree vs LSM-Tree, columnar internals, how a query actually reads disk |
+| 9 | [`09-replication-sharding-scaling.md`](./09-replication-sharding-scaling.md) | Advanced | Every real scaling pattern, with real-world numbers |
+| 10 | [`10-transactions-consistency-deep-dive.md`](./10-transactions-consistency-deep-dive.md) | Advanced | Isolation levels, distributed transactions, Raft/Paxos consensus |
+| 11 | [`11-what-companies-actually-use.md`](./11-what-companies-actually-use.md) | Production | Real database choices at Amazon, Netflix, Uber, Instagram, Discord, and more |
+| 12 | [`12-ddl-schema-design-queries.md`](./12-ddl-schema-design-queries.md) | Practical | DDL, constraints, indexes, partitioning — hands-on queries |
+| 13 | [`case-studies/`](./case-studies/) | Production | Full real-world database architecture designs |
+| 14 | [`interview-questions.md`](./interview-questions.md) | All levels | 50+ questions spanning every topic in this module |
 
-## Data Lakes / Lakehouse formats
-- **Delta Lake** (Databricks) — ACID transactions on top of Parquet, time travel.
-- **Apache Iceberg** — open table format, strong multi-engine support (Spark, Trino, Flink).
-- **Apache Hudi** — optimized for upserts/incremental pulls (CDC use cases).
+## 🧠 How This Module Is Different
+Most tutorials teach "here's MongoDB syntax" without ever explaining **why** MongoDB exists, what problem it solves that Postgres doesn't, or why a company would pick one over the other. This module is built backwards from that gap — every database type is introduced by first explaining **the exact production pain point that caused it to be invented**, then how it works, then who actually uses it and why.
 
-## Choosing a database — quick decision guide
+## 🗺️ Suggested Path
 ```
-Need transactional writes + relationships?      -> Relational (Postgres/MySQL)
-Need flexible/nested schema, high write speed?  -> MongoDB / Cassandra
-Need sub-ms lookups, serverless scaling?         -> DynamoDB / Redis
-Need to run analytics on billions of rows?       -> Snowflake / BigQuery / Redshift
-Need cheap raw storage + multiple engines?       -> Data Lake + Iceberg/Delta
+Total beginner:        01 -> 02 -> 07 -> 08 (get the RDBMS foundation rock solid first)
+NoSQL / modern:         03 -> 04 -> 05 -> 06
+Scaling & production:   09 -> 10 -> 11
+Design practice:        07 + 12 + case-studies/
+Interview prep:         11 + interview-questions.md
 ```
