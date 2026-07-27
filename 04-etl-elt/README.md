@@ -1,41 +1,35 @@
-# 04 — ETL / ELT
+# 04 — ETL / ELT: Beginner to Enterprise-Production
 
-## Flow: Legacy ETL vs Modern ELT
+Written so someone who's never heard the words "ETL" or "SSIS" before can finish this module understanding **exactly** what a Data Engineer builds, why legacy tools like SSIS/Informatica exist and how they actually work internally, and how modern tools (ADF, Glue, dbt) do the same job differently at real companies today.
 
-**Legacy ETL (SSIS / Informatica / Talend):**
+## 📖 Learning Path
+
+| # | File | Level | Covers |
+|---|---|---|---|
+| 1 | [`01-what-is-etl-elt.md`](./01-what-is-etl-elt.md) | Beginner | What ETL/ELT actually means, why it exists, history |
+| 2 | [`02-etl-architecture-deep-dive.md`](./02-etl-architecture-deep-dive.md) | Beginner-Intermediate | Staging areas, transformation types, orchestration anatomy |
+| 3 | [`03-ssis-deep-dive.md`](./03-ssis-deep-dive.md) | Intermediate | SSIS packages, Control Flow vs Data Flow, real package walkthrough |
+| 4 | [`04-informatica-deep-dive.md`](./04-informatica-deep-dive.md) | Intermediate | PowerCenter mappings, sessions, workflows, transformations |
+| 5 | [`05-legacy-tools-overview.md`](./05-legacy-tools-overview.md) | Intermediate | Talend, DataStage, AbInitio — quick reference |
+| 6 | [`06-azure-data-factory-deep-dive.md`](./06-azure-data-factory-deep-dive.md) | Advanced | ADF pipelines, linked services, datasets, Mapping Data Flows |
+| 7 | [`07-aws-glue-deep-dive.md`](./07-aws-glue-deep-dive.md) | Advanced | Glue jobs, Crawlers, Data Catalog, DynamicFrames, Glue Studio |
+| 8 | [`08-dbt-deep-dive.md`](./08-dbt-deep-dive.md) | Advanced | dbt models, Jinja/macros, tests, docs, the ELT transformation standard |
+| 9 | [`09-legacy-vs-modern-migration.md`](./09-legacy-vs-modern-migration.md) | Production | Side-by-side comparison, real migration strategy |
+| 10 | [`case-studies/`](./case-studies/) | Production | Full enterprise-style pipeline built 3 ways (SSIS-style, ADF, dbt+Airflow) |
+| 11 | [`interview-questions.md`](./interview-questions.md) | All levels | 30+ Q&A on ETL/ELT concepts and tools |
+
+## 🎯 The Core Question This Module Answers
+**"What does a Data Engineer actually DO all day with these tools?"**
+By the end, you'll be able to explain:
+- Why ETL existed before ELT, and why ELT became dominant with the cloud
+- Exactly how an SSIS/Informatica package is built, step by step
+- Why companies still run these legacy tools in 2026 (and won't fully retire them soon)
+- How ADF/Glue/dbt do the same job, and why they've become the default for new builds
+- How to have an intelligent conversation in an interview about "why did you pick X tool for Y scenario"
+
+## 🗺️ Suggested Order
 ```
-Source DB → Staging Server (transform: cleanse, join, dedupe) → Load into DW
-              (transform happens OUTSIDE the warehouse, on ETL server compute)
+New to ETL entirely:  01 -> 02 -> 03 (SSIS) -> 04 (Informatica) -> 06 (ADF) -> 07 (Glue) -> 08 (dbt)
+Already know legacy:  09 (migration) -> 06/07/08 (modern tools) -> case-studies/
+Interview prep:       09 + interview-questions.md + case-studies/
 ```
-
-**Modern ELT (Airflow + dbt):**
-```
-Source (API/DB/files) → Raw load into Warehouse/Lake (S3, Snowflake, BigQuery)
-                       → Transform IN warehouse using SQL (dbt models)
-                       → Curated tables for BI
-```
-
-## Files
-- [`airflow/etl_dag_example.py`](./airflow/etl_dag_example.py) — full DAG: extract → transform → load → DQ check
-- [`dbt_example/models_example.sql`](./dbt_example/models_example.sql) — staging + mart models with tests
-
-## Legacy Tools — Quick Notes (still asked in interviews for enterprise roles)
-- **SSIS (SQL Server Integration Services)**: drag-drop control flow + data flow tasks; common in Microsoft shops.
-- **Informatica PowerCenter**: mapping-based ETL, strong in banking/insurance; separates Source/Target/Transformation objects.
-- **Talend**: Java-code-generating ETL tool, open-source + enterprise editions.
-
-## Modern Tools
-- **Airflow**: orchestration (schedules and monitors tasks, doesn't do heavy transforms itself).
-- **dbt**: transformation layer — "SQL + software engineering practices" (version control, tests, docs, lineage).
-- **Fivetran / Airbyte**: managed EL (extract-load) connectors — reduces custom extraction code.
-
-## Data Quality Checks (add to every pipeline)
-1. Row count sanity (not zero, not wildly different from historical average)
-2. Null checks on critical columns (primary keys, foreign keys)
-3. Uniqueness checks on primary keys
-4. Freshness check (data updated within expected SLA window)
-5. Schema drift detection (new/missing columns from source)
-
-## Resources
-- dbt docs: https://docs.getdbt.com/
-- Airflow docs: https://airflow.apache.org/docs/
