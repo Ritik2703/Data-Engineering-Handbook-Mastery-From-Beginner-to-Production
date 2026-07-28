@@ -217,3 +217,16 @@ def load_to_warehouse(df, table_name, engine):
 ## Interview Traps
 - "How do you test a pipeline that depends on an external API?" — mock the external call (`unittest.mock.patch`), never hit the real API in unit tests.
 - "How do you make a pipeline re-runnable safely?" — idempotent design via `MERGE`/upsert, not blind `INSERT`.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"A peaceful mind sees the pattern in the chaos that an anxious mind misses entirely."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

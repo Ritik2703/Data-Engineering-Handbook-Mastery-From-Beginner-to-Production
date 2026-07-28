@@ -140,3 +140,16 @@ Need "Nth highest per group", "latest record per key",
 - RANK vs DENSE_RANK vs ROW_NUMBER — expect this in almost every SQL interview; know the exact tie-handling difference.
 - "Find 2nd/3rd/Nth highest X per group" is asked so often it's worth memorizing the `DENSE_RANK` + subquery/CTE pattern exactly.
 - Window functions execute **after** `WHERE`/`GROUP BY`/`HAVING` but **before** `ORDER BY`/`LIMIT` in logical processing order — you cannot filter directly on a window function result in the same-level `WHERE` (must wrap in a subquery/CTE, as shown above).
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"Every system you build today teaches someone tomorrow — build with that responsibility in mind."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

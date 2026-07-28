@@ -77,3 +77,16 @@ Opening a new DB connection is expensive. Production systems use a **connection 
 ## Interview Traps
 - CAP theorem: don't say "you can only ever have 2" without the partition-tolerance caveat — interviewers want to hear that partition tolerance is mandatory in practice, so it's really a CP vs AP tradeoff.
 - Isolation levels: know that higher isolation = more locking = lower concurrency/throughput.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"Knowledge shared freely returns multiplied — teach what you learn, and you will learn it twice as deeply."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

@@ -151,3 +151,16 @@ SELECT * FROM customers WHERE deleted_at IS NULL;
 2. Add a `NOT NULL` column to a large existing table using the safe 4-step pattern above.
 3. Create a partial index for "only pending orders" and verify with `EXPLAIN ANALYZE` that it's used for a query filtering on `status = 'pending'`.
 4. Implement a soft-delete pattern for a `products` table and rewrite a `SELECT *` query to respect it.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"Let effort be joyful, not anxious — the quality of your work reflects the quality of your mind."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

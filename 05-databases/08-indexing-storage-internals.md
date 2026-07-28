@@ -69,3 +69,16 @@ This is also the exact mechanism Change Data Capture (CDC) tools like Debezium r
 - "Why is Parquet so much faster for analytical queries than row-based CSV?" — columnar layout enables column pruning (skip unneeded columns entirely) and much better compression, plus predicate pushdown via stored min/max block metadata.
 - "How does a database guarantee data isn't lost in a crash?" — Write-Ahead Logging; be ready to explain the commit-returns-after-WAL-write-not-after-full-data-file-write sequence.
 - "How does CDC read database changes without slowing down the source database?" — it tails the WAL/binlog that the database is already writing for its own durability guarantees, rather than issuing new queries against the live tables.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"A humble question asked sincerely is worth more than a confident answer given carelessly."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

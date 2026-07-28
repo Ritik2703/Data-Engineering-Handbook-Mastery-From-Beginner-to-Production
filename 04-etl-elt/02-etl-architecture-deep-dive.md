@@ -77,3 +77,16 @@ A single pipeline reads this control table and dynamically extracts/loads each r
 - "Why have a staging area instead of transforming directly?" — re-runnability, auditability, decoupling extraction failures from transformation bugs.
 - "How would you design an incremental load without a reliable timestamp column?" — mention CDC (reading the transaction log) as the robust answer, or a monotonically increasing ID as a simpler fallback.
 - Metadata-driven / parameterized pipeline design is a strong signal of senior-level thinking in interviews — bring it up when asked about scaling ETL to many tables.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"Let your work be your offering, done with care, regardless of who is watching."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

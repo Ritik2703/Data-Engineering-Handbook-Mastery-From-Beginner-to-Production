@@ -123,3 +123,16 @@ Step Functions orchestrates the whole chain above, with SNS alerts on any step f
 - "Why use a DynamicFrame instead of a plain Spark DataFrame?" — more forgiving schema handling for messy/evolving semi-structured data, plus native integration with the Glue Data Catalog and Job Bookmarks.
 - "How does Glue know the schema of data in S3?" — the Glue Data Catalog, populated either by a Crawler (automatic) or manually defined.
 - "How do you handle incremental loads in Glue?" — Job Bookmarks (built-in) vs a hand-managed watermark/control table (more control, common in complex enterprise scenarios) — know both approaches and their tradeoffs.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"A grounded heart makes better decisions than a restless one chasing every trend."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

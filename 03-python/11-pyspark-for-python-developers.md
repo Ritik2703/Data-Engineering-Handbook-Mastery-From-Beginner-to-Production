@@ -137,3 +137,16 @@ df = df.withColumn("with_tax", F.col("amount") * 1.18)
 1. Write a PySpark job that reads a CSV, deduplicates on a key keeping the latest record, and writes partitioned Parquet.
 2. Rewrite a Python UDF-based transformation using native Spark functions and compare.
 3. Add proper try/except/finally error handling (including `spark.stop()`) to a Spark ETL script.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"When you stop fearing mistakes, you start truly learning from them."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

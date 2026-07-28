@@ -175,3 +175,16 @@ except DataQualityError as e:
 1. Write a manual validation function checking for nulls, duplicates, and out-of-range values on a sample DataFrame.
 2. Convert those manual checks into a Pandera schema.
 3. Add a freshness check that raises an exception if the most recent record is older than 24 hours.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"Consistency, not intensity, is what carries you across a long journey."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

@@ -110,3 +110,16 @@ FROM products;
 - Forgetting `WHERE` clause order doesn't matter for logic but does for readability — put the most selective filter first for your own clarity (engine usually reorders anyway).
 - Using `=` instead of `LIKE` for partial text matches (it will error or return nothing).
 - Comparing `NULL` with `=` instead of `IS NULL` (always returns unknown/false, never true).
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"The mind that stays equanimous in success and failure alike is the mind that keeps improving."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

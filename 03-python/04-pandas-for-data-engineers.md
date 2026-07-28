@@ -152,3 +152,16 @@ This chaining style (common in production ETL scripts and dbt-adjacent Python tr
 2. Merge two DataFrames and identify rows present in one but not the other (anti-join).
 3. Convert a wide monthly-columns DataFrame into a long/tidy format with `melt`.
 4. Rewrite an `.apply()`-based transformation using a vectorized approach and compare readability.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"Real strength is staying kind and steady while still holding high standards."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

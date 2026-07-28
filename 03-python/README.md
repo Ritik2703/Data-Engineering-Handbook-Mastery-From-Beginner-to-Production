@@ -43,3 +43,16 @@ Every code example in this module follows the same production discipline:
 - **Logging, not print()** — production code logs with levels (INFO/WARNING/ERROR), not `print()` statements
 - **Credentials never hardcoded** — environment variables / secrets managers, always
 - **Real company scenario framing** — every concept tied to why a product company actually needs it
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"True knowledge humbles you; false knowledge inflates you — seek the former always."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

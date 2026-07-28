@@ -177,3 +177,16 @@ df = pd.read_csv("mystery_file.csv", encoding=result["encoding"])
 2. Read an Excel file with 3 sheets and combine them into one DataFrame with a `source_sheet` column.
 3. Convert a JSON Lines event log into a Parquet file.
 4. Handle a `UnicodeDecodeError` gracefully by detecting encoding first.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"What you practice with full attention becomes part of who you are."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

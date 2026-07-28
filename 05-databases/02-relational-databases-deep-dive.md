@@ -88,3 +88,16 @@ CREATE TABLE orders (
 ## Interview Traps
 - "Why does Postgres 'not block readers with writers'?" — MVCC, explained above; be ready to describe it in your own words.
 - "Why do OLTP systems normalize while warehouses denormalize?" — different query patterns: OLTP does frequent small targeted writes/reads (normalization prevents anomalies cheaply); warehouses do infrequent large analytical reads (denormalization avoids expensive joins at query time, since writes are batched, not per-transaction).
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"Stillness before action prevents most of the mistakes that haste creates."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

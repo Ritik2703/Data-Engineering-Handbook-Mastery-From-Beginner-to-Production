@@ -91,3 +91,16 @@ Think of a real company (e.g., a food delivery app). List out:
 3. What business question would the final warehouse table answer?
 
 This exercise — thinking in terms of sources → transforms → business questions — is the actual daily mental model of a Data Engineer, regardless of which specific tool they're using.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"The devotion you bring to small tasks is what prepares you for the larger ones."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

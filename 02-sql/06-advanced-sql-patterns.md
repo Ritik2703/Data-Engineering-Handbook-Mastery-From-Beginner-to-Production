@@ -146,3 +146,16 @@ WHERE NOT EXISTS (SELECT 1 FROM order_items oi WHERE oi.product_id = p.product_i
 ## Interview Traps
 - Gaps & islands and sessionization look intimidating but always follow the same recipe: **generate a group marker using a window function, then GROUP BY that marker.** Recognize this pattern instantly.
 - Funnel analysis questions are extremely common at product companies (Amazon, Swiggy, Uber) — practice writing conditional aggregation (`MAX(CASE WHEN ...)`) fluently.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"When the mind is still, the right solution often reveals itself without force."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

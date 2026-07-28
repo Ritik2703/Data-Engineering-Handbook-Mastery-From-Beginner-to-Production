@@ -92,3 +92,16 @@ Banking and fintech interviews lean heavily on:
 - **Auditability** — reconciliation queries (`FULL OUTER JOIN`), immutable transaction logs, SCD Type 2 for account attribute history
 - **Time-series pattern detection** — `LAG`/`LEAD` heavy, since fraud and anomaly detection is fundamentally about comparing an event to what came before it
 - **Idempotency** — a transaction pipeline must NEVER double-process a payment on retry (ties back to `01-fundamentals/02-core-concepts.md`)
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"The path of consistent small duties, done well, quietly becomes greatness."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

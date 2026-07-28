@@ -93,3 +93,16 @@ BI:             Cognos / SSRS / older Tableau deployments
 ```
 
 > Real-world tip: most companies run a **hybrid** of legacy + modern — expect to work with both, especially at larger/older organizations mid-migration to cloud.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"A student who questions deeply respects the subject more than one who memorizes blindly."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

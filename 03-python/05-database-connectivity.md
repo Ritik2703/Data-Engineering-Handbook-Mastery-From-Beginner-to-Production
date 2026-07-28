@@ -216,3 +216,16 @@ In production, credentials come from a secrets manager (AWS Secrets Manager, Azu
 ## Interview Traps
 - "How do you prevent SQL injection in Python?" — always parameterized queries (`%s`, `?`, `:name` placeholders), never string formatting/f-strings to build SQL.
 - "Why use connection pooling?" — opening connections is expensive; pooling amortizes that cost across many requests/tasks, and prevents overwhelming the DB with too many simultaneous raw connections.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"The one who helps others rise, rises highest themselves, without needing to say so."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

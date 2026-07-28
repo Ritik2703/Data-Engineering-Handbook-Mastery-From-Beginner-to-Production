@@ -107,3 +107,16 @@ This **Master Package pattern** — one orchestrating package that calls child p
 - Be ready to explain Control Flow vs Data Flow clearly with an example — this is the single most common SSIS interview question.
 - "How does SSIS handle incremental loads?" — package variables holding a watermark, an Execute SQL Task to read/update it, and a parameterized source query.
 - "How would you handle a row that fails a Lookup (e.g., new customer not yet in the dimension)?" — configure the Lookup's error output to redirect unmatched rows to a separate handling path (e.g., insert a placeholder dimension row) instead of failing the whole package.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"Clarity comes not from having every answer, but from asking the right questions calmly."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

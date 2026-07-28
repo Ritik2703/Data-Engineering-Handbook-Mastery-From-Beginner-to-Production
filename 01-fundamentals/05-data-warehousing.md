@@ -71,3 +71,16 @@ GROUP BY sale_date, region;
 ## Interview Traps
 - Explain WHY separating storage and compute (Snowflake/BigQuery model) was a big deal — it lets you scale each independently and pay only for what you use, vs traditional fixed-cluster warehouses (Teradata/on-prem) where you pay for peak capacity 24/7.
 - Distribution key choice can make or break MPP query performance — a bad choice causes "data skew" (one node doing most of the work while others idle).
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"Small, consistent effort every day outperforms burst of motivation once a month."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

@@ -151,3 +151,16 @@ except HttpResponseError as e:
 1. Write a function that reads a CSV directly from Azure Blob Storage into a pandas DataFrame without a local file.
 2. Retrieve a database password from Key Vault and use it to connect to Azure SQL Database.
 3. Write a function that triggers an ADF pipeline and polls its status until completion or failure.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"A mind free of unnecessary worry has far more room for genuine creativity."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

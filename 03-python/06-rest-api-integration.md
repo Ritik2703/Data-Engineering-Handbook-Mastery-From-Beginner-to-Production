@@ -234,3 +234,16 @@ def extract_all_orders(api_base_url, api_key, updated_since):
 ## Interview Traps
 - "How do you handle pagination in a Python extractor?" — be ready to describe offset-based vs cursor-based vs link-header, and why cursor-based is generally preferred for large/changing datasets (offset pagination can skip/duplicate records if data changes between page fetches).
 - "How do you avoid hardcoding retry logic everywhere?" — mention `tenacity` decorators as the production standard.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"Every dataset tells a story; listen to it without forcing your assumptions onto it."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

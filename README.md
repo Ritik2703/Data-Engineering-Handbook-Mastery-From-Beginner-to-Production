@@ -56,3 +56,16 @@ Found a gap? Add a folder following the existing pattern: `README.md` (concept) 
 
 ## 📜 License
 MIT — use freely, attribution appreciated.
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"The one who finds joy in the process rarely feels the weight of the destination."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>
+

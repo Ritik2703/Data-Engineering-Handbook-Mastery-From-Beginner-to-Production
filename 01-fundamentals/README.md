@@ -34,3 +34,16 @@ Every file follows the same depth pattern:
 - **Legacy vs modern** (what changed and why)
 - **Cloud mapping** (AWS / Azure / GCP equivalents where relevant)
 - **Interview traps** (common gotchas)
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"Patience with a difficult bug mirrors patience with a difficult moment — both pass, if you stay steady."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

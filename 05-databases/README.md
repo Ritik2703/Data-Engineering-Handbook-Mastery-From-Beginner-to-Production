@@ -32,3 +32,16 @@ Scaling & production:   09 -> 10 -> 11
 Design practice:        07 + 12 + case-studies/
 Interview prep:         11 + interview-questions.md
 ```
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"To teach with patience is to plant a tree whose shade you may never sit under yourself."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

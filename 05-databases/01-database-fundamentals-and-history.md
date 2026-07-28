@@ -47,3 +47,16 @@ workloads) hit new limits of today's tools.
 1. Explain in your own words why Amazon needed Dynamo instead of just using a bigger Oracle server for their shopping cart in 2007.
 2. Why would Google need Spanner's synchronized atomic clocks specifically — what problem does that solve that a normal distributed database can't?
 3. Why did vector databases only become mainstream in 2023+ rather than, say, 2015?
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"Duty done well, without craving credit, is its own quiet reward."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

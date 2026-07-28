@@ -97,3 +97,16 @@ Cosmos DB (file 5) is notable for explicitly exposing this ENTIRE spectrum as a 
 ## Interview Traps
 - "What's the difference between 2PC and Raft/Paxos-based consensus?" — 2PC coordinates a single distributed transaction across heterogeneous systems but has fragile failure recovery (coordinator crash = stuck locks); Raft/Paxos are built for ongoing, repeated agreement within a single replicated system, with well-defined majority-based failure tolerance.
 - "Why would eventual consistency ever be an acceptable choice?" — be ready with a real example (like counts, view counts) where brief staleness genuinely doesn't harm the business, versus one where it would be unacceptable (account balances) — this shows you can reason about tradeoffs rather than treating "strong consistency" as always strictly better.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"Every act of genuine service, however small, ripples further than you can see."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

@@ -90,3 +90,16 @@
 ---
 
 **Practice tip**: For any tool-specific question you don't know the exact syntax for, answer with the underlying CONCEPT first ("this needs a staging area + incremental watermark + SCD2 dimension handling") and then map it to whichever tool's terminology you DO know — interviewers consistently value this conceptual fluency over rote tool-specific memorization.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"A mind untroubled by ego solves problems that a proud mind cannot even see clearly."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

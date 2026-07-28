@@ -91,3 +91,16 @@ Always filter directly on the partition column in its native form — wrapping i
 ## Interview Traps
 - "Why isn't my index being used?" is one of the most common real debugging interview questions — always check for a function wrapping the column, a type mismatch, or low table statistics (needs `ANALYZE`).
 - Be ready to explain **sargable** — it comes up a lot at senior/production-focused interviews.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"Right action, done without ego, creates far less mess to clean up later."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

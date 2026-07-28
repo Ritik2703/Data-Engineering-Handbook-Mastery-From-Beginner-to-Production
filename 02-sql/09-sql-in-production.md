@@ -118,3 +118,16 @@ All production SQL (dbt models, stored procedures, migration scripts) lives in *
 ## Interview Traps
 - Being asked "write this in SQL" without a specified dialect — always ask/clarify, and mention the dialect you're assuming if not told.
 - "How do you ensure data quality in a dbt-based warehouse?" — mention `dbt test` (unique, not_null, accepted_values, relationships) as the standard answer.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"Practice with devotion, not just repetition, and even routine work becomes meaningful."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

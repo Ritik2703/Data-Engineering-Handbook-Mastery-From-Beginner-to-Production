@@ -60,3 +60,16 @@ This is precisely why this module teaches concepts and tradeoffs first, tool-by-
 ## Interview Traps
 - "Which database is the best?" has no correct single answer — the strong answer is always "it depends on the access pattern, consistency needs, and scale," backed by a specific real example like the ones above.
 - Being able to name WHY a specific company chose/built a specific technology (not just that they use it) signals genuine understanding rather than name-dropping — practice explaining the "why" for at least 2-3 of the examples above in your own words.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"The disciplined mind finds opportunity exactly where the restless mind finds only obstacles."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

@@ -65,3 +65,16 @@ These solve the "data swamp" problem — plain files in S3 have no transactions 
 ## Interview Traps
 - "Why Parquet over CSV for analytics?" → columnar layout + predicate/column pruning + compression + schema embedded (no guessing types) + splittable for parallel processing.
 - Know that GZIP is NOT splittable in most distributed engines — a common gotcha when someone picks it for huge files expecting parallel processing.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"The wise engineer fixes the system, not just the symptom — just as the wise mind fixes the root, not the reaction."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

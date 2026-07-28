@@ -87,3 +87,16 @@ Building a new lakehouse platform today, want simplicity
 ## Interview Traps
 - Be ready to explain WHY Kappa emerged (Lambda's dual-codebase maintenance burden) — this is a very common "explain the evolution" interview question.
 - Medallion isn't a new invention over Kimball/star-schema — it's a **physical layering strategy** for lake/lakehouse storage; you still apply dimensional modeling concepts within the Gold layer.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"Detach your self-worth from any single outcome, and you will make clearer decisions."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

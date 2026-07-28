@@ -38,3 +38,16 @@
 **Star Schema** — Fact table surrounded by denormalized dimension tables; standard dimensional model.
 **Streaming** — Processing data continuously as events arrive, rather than in scheduled batches.
 **Watermark (streaming)** — Threshold defining how late an event can arrive and still be processed.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"Serve the work in front of you fully, and skill follows naturally, without needing to chase it."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

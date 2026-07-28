@@ -98,3 +98,16 @@ This staged, problem-driven evolution (not jumping straight to the most complex 
 - "How would you scale a database handling 10x more traffic?" — always start with the STAGED approach above (vertical scaling/optimization -> caching -> read replicas -> functional splitting -> sharding), not jump straight to "shard it."
 - "What's replication lag and how do you handle it?" — explain the "read your own write" problem and at least one mitigation (route specific reads to the primary, or session-consistency patterns).
 - "Range-based vs hash-based sharding — which would you choose for a time-series logging table?" — hash-based avoids hot shards from naturally sequential timestamp-based writes all landing on the "newest" range shard; but acknowledge this makes time-range queries need to hit every shard, a real tradeoff to discuss.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"Real mastery is not the absence of struggle, but peace in the midst of it."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

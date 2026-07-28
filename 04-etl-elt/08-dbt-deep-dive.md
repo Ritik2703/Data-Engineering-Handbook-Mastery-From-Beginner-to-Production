@@ -161,3 +161,16 @@ This "Fivetran + dbt + Snowflake + Airflow" combination (sometimes swapping any 
 - "How does dbt know the order to build models in?" — the dependency graph built automatically from `{{ ref() }}` calls between models; no manual orchestration logic needed within dbt itself.
 - "How do you implement SCD Type 2 in dbt?" — Snapshots, not a hand-written MERGE (though know the manual SQL pattern too, since it's still asked and Snapshots use it internally).
 - "Difference between a dbt test and Great Expectations?" — dbt tests are lightweight, SQL-based, and live directly alongside the transformation models they test; Great Expectations is a more comprehensive standalone framework often used earlier in the pipeline (validating raw/staged data before it even reaches dbt) or for more complex statistical/distributional checks.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"The wise do not chase shortcuts that compromise the integrity of the work."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

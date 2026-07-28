@@ -118,3 +118,16 @@ JOIN products p    ON oi.product_id = p.product_id;
 ## Interview Traps
 - "Difference between WHERE and ON in a LEFT JOIN" is one of the most common SQL interview questions — know the silent-INNER-JOIN gotcha above cold.
 - Be ready to explain why a JOIN without an `ON`/`USING` clause (accidental cross join) is dangerous in production.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"True understanding removes fear, whether of an interview, a production outage, or an uncertain future."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

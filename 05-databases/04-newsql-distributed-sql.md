@@ -60,3 +60,16 @@ CREATE TABLE orders (
 - "What makes NewSQL different from just sharding a regular SQL database yourself?" — automatic, transparent distribution + true ACID transactions across nodes via consensus (Raft/Paxos), vs manual application-level shard-routing logic with no cross-shard transaction guarantees.
 - Be ready to explain Spanner's TrueTime concept at a high level — it's a favorite "do you actually understand distributed systems" interview probe at companies working on distributed infrastructure.
 - "Would you always recommend NewSQL over traditional Postgres?" — no; a nuanced answer acknowledges that most companies don't need planet-scale distribution, and a well-tuned single-node/read-replica Postgres setup remains the pragmatic default for the vast majority of workloads.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"The truest teacher is the one who makes the student capable of walking alone."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

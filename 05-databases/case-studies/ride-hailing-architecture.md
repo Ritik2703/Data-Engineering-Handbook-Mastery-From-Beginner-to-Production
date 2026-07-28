@@ -105,3 +105,16 @@ Using this same multi-database reasoning, design a database architecture for:
 2. A social media platform (user profiles, posts/feed, real-time notifications, friend graph, trending content analytics).
 
 For each, identify which access pattern maps to which database TYPE (not necessarily specific product) from files 2-6 of this module, and justify why.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"The wise do not measure their day by outcomes alone, but by the sincerity of their effort."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

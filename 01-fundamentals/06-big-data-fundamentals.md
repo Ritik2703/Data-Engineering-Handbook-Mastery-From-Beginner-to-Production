@@ -87,3 +87,16 @@ Processes each event as it arrives — lowest latency, but more complex (state m
 ## Interview Traps
 - "Why is Spark faster than MapReduce?" → in-memory computation across stages + Catalyst/Tungsten optimizations + lazy evaluation building a globally optimized plan, not just "it uses RAM."
 - Data skew is one of the most common real-world Spark performance issues asked about in senior interviews — know at least one mitigation (salting, broadcast join, repartition).
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"Discipline in practice today is what quietly becomes mastery tomorrow."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

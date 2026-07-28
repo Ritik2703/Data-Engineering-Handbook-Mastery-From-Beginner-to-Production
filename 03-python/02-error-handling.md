@@ -165,3 +165,16 @@ except ValueError as e:
 - "Why avoid bare `except:`?" — because it catches things you never intended to catch (including `SystemExit`/`KeyboardInterrupt`), silently hiding real bugs.
 - "Difference between `except` and `except...else`?" — `else` only runs on success, keeping happy-path logic separate from error handling for readability.
 - Be ready to explain exponential backoff and why it's better than fixed-delay retries (reduces load on an already-struggling system, avoids thundering-herd retries from many clients at once).
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"A grateful heart learns faster, because it isn't busy comparing itself to others."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

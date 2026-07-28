@@ -107,3 +107,16 @@ A **parameter file** is passed into a Workflow at runtime, letting the exact sam
 - Be ready to walk through the SCD Type 2 mapping pattern above from memory — it's asked extremely often for Informatica-specific roles.
 - "Difference between a Filter and a Router transformation?" — Filter has ONE condition and one output (rows either pass or don't); Router can have MULTIPLE conditions producing MULTIPLE output groups simultaneously (like an if/elif/elif chain vs a single if).
 - "What's an Update Strategy transformation for?" — explicitly tagging each row for INSERT/UPDATE/DELETE/REJECT, essential for any mapping that needs to both insert new records and update existing ones (like SCD2) in a single pass.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"The strongest foundation is built one honest, unglamorous brick at a time."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

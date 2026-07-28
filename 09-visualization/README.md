@@ -1,44 +1,51 @@
-# 09 — Visualization
+# 09 — Data Visualization: Excel to Modern BI (Zero to Pro)
 
-## Tableau — Core Concepts
-- **Extract vs Live connection**: Extract = snapshot (.hyper file, faster, needs refresh schedule); Live = always current, hits source DB every query.
-- **Dimensions vs Measures**: Dimensions = qualitative/categorical (region, product); Measures = quantitative/aggregatable (sales, quantity).
-- **Calculated Fields**: e.g. `IF [Sales] > 1000 THEN "High" ELSE "Low" END`
-- **LOD (Level of Detail) Expressions**: `{FIXED [Region] : SUM([Sales])}` — compute aggregation at a different granularity than the view.
-- **Blending vs Joining**: Joining = combine at data-source level (same source or compatible); Blending = combine dashboards from different data sources at aggregate level.
-- Publish to **Tableau Server/Cloud** with scheduled extract refreshes tied to the underlying ETL pipeline's completion.
+The complete visualization module — starting from Excel (still the world's most-used data tool by raw user count) through the Tableau/Power BI revolution, to today's semantic-layer and embedded-analytics era. Understand not just HOW to use these tools, but WHY each evolution happened and what real problem it solved.
 
-## Power BI — Core Concepts
-- **Power Query (M language)**: the ETL/transform layer inside Power BI — similar to dbt but GUI-driven, runs before data loads into the model.
-- **DAX (Data Analysis Expressions)**: formula language for measures.
-  ```
-  Total Sales = SUM(Orders[Amount])
-  YoY Growth % = 
-      DIVIDE(
-          [Total Sales] - CALCULATE([Total Sales], SAMEPERIODLASTYEAR('Date'[Date])),
-          CALCULATE([Total Sales], SAMEPERIODLASTYEAR('Date'[Date]))
-      )
-  ```
-- **Star Schema modeling** in Power BI's model view — same dimensional modeling concepts from `01-fundamentals/` apply directly.
-- **Import vs DirectQuery mode**: Import = data cached in-memory (fast, needs refresh); DirectQuery = live query to source (always fresh, slower, source load).
-- **Row-Level Security (RLS)**: restrict which rows a user sees based on their identity — critical for enterprise dashboards.
-- Publish to **Power BI Service**, schedule refresh tied to pipeline completion (or use Power BI's REST API to trigger refresh programmatically after ETL finishes).
+## 📖 Learning Path
 
-## Trigger refresh via Power BI REST API (common DE integration point)
-```python
-import requests
+| # | File | Level | Covers |
+|---|---|---|---|
+| 1 | [`01-history-of-data-visualization.md`](./01-history-of-data-visualization.md) | Beginner | Excel era → BI tool revolution → modern semantic layer, decade by decade |
+| 2 | [`02-excel-deep-dive.md`](./02-excel-deep-dive.md) | Beginner-Intermediate | Pivot Tables, formulas, Power Query, Power Pivot — Excel's real depth |
+| 3 | [`03-tableau-deep-dive.md`](./03-tableau-deep-dive.md) | Intermediate-Advanced | Architecture, LOD expressions, calculated fields, real dashboards |
+| 4 | [`04-powerbi-deep-dive.md`](./04-powerbi-deep-dive.md) | Intermediate-Advanced | Power Query, data model, DAX, Power BI Service |
+| 5 | [`05-dax-deep-dive.md`](./05-dax-deep-dive.md) | Advanced | DAX language — measures, context, time intelligence |
+| 6 | [`06-modern-bi-semantic-layer.md`](./06-modern-bi-semantic-layer.md) | Advanced | Looker/LookML, dbt Semantic Layer, the "define metrics once" movement |
+| 7 | [`07-dashboard-design-principles.md`](./07-dashboard-design-principles.md) | Intermediate-Advanced | What makes a dashboard actually USEFUL, not just pretty |
+| 8 | [`08-embedded-analytics-modern-trends.md`](./08-embedded-analytics-modern-trends.md) | Advanced | Embedded BI, AI-powered natural-language analytics, 2026 trends |
+| 9 | [`09-what-companies-use.md`](./09-what-companies-use.md) | Production | Real company BI stacks and why |
+| — | [`case-studies/`](./case-studies/) | Production | Full dashboard design walkthrough for a real business scenario |
+| — | [`interview-questions.md`](./interview-questions.md) | All levels | 35+ Q&A across the whole module |
 
-url = f"https://api.powerbi.com/v1.0/myorg/groups/{workspace_id}/datasets/{dataset_id}/refreshes"
-headers = {"Authorization": f"Bearer {access_token}"}
-requests.post(url, headers=headers)
+## 🎯 What This Module Answers
+```
+- Why did Excel dominate for DECADES, and why does it still matter in 2026?
+- What specific problem did Tableau/Power BI actually solve that Excel couldn't?
+- Why did "self-service BI" become such a big deal?
+- What's a semantic layer, and why is "define your metrics once" suddenly
+  such a hot topic (dbt Semantic Layer, Looker's LookML)?
+- Where is BI heading next — AI-powered analytics, embedded dashboards?
 ```
 
-## Python Visualization (for pipeline QA / notebooks, not BI replacement)
-See [`python-viz/viz_examples.py`](./python-viz/viz_examples.py) — matplotlib, seaborn heatmaps, plotly interactive charts.
+## 🗺️ Suggested Path
+```
+Total beginner:       01 -> 02 (yes, really learn Excel deeply first)
+BI tool focused:       03 (Tableau) and/or 04+05 (Power BI + DAX)
+Modern/strategic:      06 -> 08
+Design skills:         07 + case-studies/
+Interview prep:        09 + interview-questions.md
+```
 
-## Choosing a BI tool
-```
-Microsoft-stack org, need deep Excel/Azure integration -> Power BI
-Need highly polished, flexible/free-form visual design -> Tableau
-Need embedded analytics inside a custom app             -> Looker / Power BI Embedded / Superset (OSS)
-```
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"The one who finds joy in the process rarely feels the weight of the destination."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

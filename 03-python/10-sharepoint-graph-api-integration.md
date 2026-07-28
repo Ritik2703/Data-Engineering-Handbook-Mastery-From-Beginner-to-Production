@@ -207,3 +207,16 @@ def sharepoint_to_warehouse_pipeline():
 1. Register a free Azure AD app (trial tenant) and successfully retrieve an access token.
 2. Write a function to pull any SharePoint list you have access to into a pandas DataFrame.
 3. Add retry logic (`tenacity`) around the Graph API calls for resilience against transient 5xx errors.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"The seed of mastery is planted in the humble willingness to be a beginner again."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

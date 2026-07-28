@@ -38,3 +38,16 @@ These aren't transformation tools — they're **enterprise-grade job schedulers*
 
 ## Why This Matters Even If You'll Never Touch These Tools
 Enterprise DE interviews (especially at banks, insurance companies, and large legacy-heavy corporations) will often ask "have you worked with Informatica/DataStage/Ab Initio?" — even if you haven't, being able to say "I haven't used it directly, but I understand it follows the same Mapping/Workflow pattern as [tool you DO know], where X does Y" demonstrates real conceptual understanding rather than tool-specific memorization, which interviewers value highly.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"Compassion for a struggling beginner today is a debt you repay to your own beginner self."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

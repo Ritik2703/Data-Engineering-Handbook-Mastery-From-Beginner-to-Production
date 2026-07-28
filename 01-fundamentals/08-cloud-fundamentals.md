@@ -72,3 +72,16 @@ Beyond core Azure data services, enterprises on Microsoft 365 often need to pull
 ## Interview Traps
 - Don't confuse "serverless" with "free" — BigQuery/Athena serverless pricing can spike hard if someone runs `SELECT *` on a huge unpartitioned table (billed per TB scanned).
 - Know the shared responsibility model cold — "who's responsible for a misconfigured public S3 bucket?" (Answer: the customer, always, regardless of cloud provider.)
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"Every failure in a pipeline, like every failure in life, is data for the next attempt — not a verdict on your worth."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

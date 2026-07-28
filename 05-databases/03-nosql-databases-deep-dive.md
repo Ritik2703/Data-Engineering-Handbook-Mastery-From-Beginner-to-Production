@@ -94,3 +94,16 @@ Data is fundamentally about relationships/connections/traversal?           -> Gr
 - Never answer "we'd use NoSQL" without specifying which of the 4 types and why — this is an immediate signal of surface-level understanding to an interviewer.
 - Be ready to explain a real CAP tradeoff decision (shopping cart AP example above) — abstract CAP theorem recall alone doesn't demonstrate applied understanding.
 - "Why can't you just add SQL-style ad-hoc queries to Cassandra?" — because data is physically partitioned/distributed by the partition key specifically to make partition-key queries fast; querying by an arbitrary non-key column would require scanning across many nodes, defeating the entire design purpose (though secondary indexes and materialized views exist as partial mitigations).
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"What is built with patience rarely needs to be rebuilt from scratch."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

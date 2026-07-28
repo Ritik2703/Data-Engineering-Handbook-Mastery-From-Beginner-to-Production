@@ -149,3 +149,16 @@
 ---
 
 **Practice tip**: For system-design-style questions (Q18, Q27, Q36), always narrate your REASONING out loud, not just the final answer — interviewers are evaluating your decision-making process (why THIS tradeoff, not that one) far more than whether you land on the exact "textbook" answer.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"A mind anchored in purpose does not get shaken by every passing distraction."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

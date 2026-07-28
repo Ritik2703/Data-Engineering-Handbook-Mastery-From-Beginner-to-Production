@@ -100,3 +100,16 @@ Note the **Self-Hosted Integration Runtime** — a lightweight agent installed o
 - "Difference between a Linked Service and a Dataset?" — Linked Service = the connection itself (how to connect); Dataset = a specific pointer to data within that connection (what to connect to).
 - "How do you handle 100+ tables without building 100+ pipelines?" — parameterized pipeline + ForEach Activity + metadata/control table, exactly as described above.
 - "How does ADF reach an on-premises SQL Server?" — Self-Hosted Integration Runtime, a critical concept for any hybrid cloud/on-prem migration conversation.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"Real progress is often invisible from the outside and felt only from within."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

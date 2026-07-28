@@ -121,3 +121,16 @@ LIMIT 20;
 
 ## Takeaway
 Streaming companies live and die by **engagement and retention metrics** — cohort analysis, sessionization, and leaderboard/ranking queries are asked constantly in interviews for these companies specifically because they map directly to real dashboards their data teams maintain daily.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"Fear of failure blocks more learning than failure itself ever could."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

@@ -61,3 +61,16 @@ Need massive, unpredictable-scale key-value access, AWS-native?                -
 ## Interview Traps
 - "What's the key architectural difference between Aurora and traditional RDS MySQL?" — separated compute/storage layer, storage automatically replicated 6-ways across 3 AZs at the storage layer itself (not application-level replication), dramatically faster failover.
 - "Why would you choose Cosmos DB's 'Session' consistency over 'Strong'?" — lower latency/higher availability while still guaranteeing a user always sees their own writes immediately — the right tradeoff for most user-facing features that don't need global strong consistency.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"Steadiness of mind under pressure is worth more than any single clever trick."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

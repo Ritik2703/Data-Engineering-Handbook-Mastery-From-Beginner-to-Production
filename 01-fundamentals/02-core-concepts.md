@@ -65,3 +65,16 @@ A pipeline is **idempotent** if running it multiple times with the same input pr
 ## Interview Traps
 - "Real-time" is often misused — clarify if the business actually needs sub-second latency or just "fresher than daily."
 - Idempotency is one of the most commonly skipped concepts by juniors and one of the most commonly asked in senior interviews.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"A calm mind learns faster than an anxious one; steady your breath before you steady your code."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

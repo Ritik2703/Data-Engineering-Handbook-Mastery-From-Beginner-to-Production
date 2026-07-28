@@ -33,3 +33,16 @@ New to ETL entirely:  01 -> 02 -> 03 (SSIS) -> 04 (Informatica) -> 06 (ADF) -> 0
 Already know legacy:  09 (migration) -> 06/07/08 (modern tools) -> case-studies/
 Interview prep:       09 + interview-questions.md + case-studies/
 ```
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"Selfless effort, sustained quietly over time, achieves what impatience never can."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

@@ -63,3 +63,16 @@ Staff/Principal Data Engineer (8+ yrs)
 - [ ] Data warehouse (Snowflake/BigQuery/Redshift/Synapse)
 - [ ] Basic infra-as-code (Terraform) — increasingly expected at senior level
 - [ ] Communication — translating business asks into data models
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"Do your work with full sincerity, and leave the outcome to the universe — that is the secret of a peaceful mind."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

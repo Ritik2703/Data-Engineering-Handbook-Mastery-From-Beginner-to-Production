@@ -97,3 +97,16 @@ LIMIT 20;
 
 ## Why These Patterns Matter
 Every one of these is a **real recurring business question** — revenue trends, quality signals, retention, churn, recommendations — solved with the exact SQL concepts from files 1-6 of this module. This is what "product-based company SQL" actually looks like: business logic wrapped in clean, readable, testable SQL.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"A generous teacher and a curious student together create knowledge that outlives them both."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

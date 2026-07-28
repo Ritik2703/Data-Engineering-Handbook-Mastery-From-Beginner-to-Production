@@ -105,3 +105,16 @@ GROUP BY ROLLUP(region, category);
 ## Interview Traps
 - Explain why `WHERE` can't use an aggregate function but `HAVING` can — tie it to execution order.
 - "Find categories where average price > 500 AND number of products > 10" — needs both `HAVING AVG(price) > 500 AND COUNT(*) > 10` in one clause.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"Give your best effort without obsessing over applause — the work itself is the reward."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

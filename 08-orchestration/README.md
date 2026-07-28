@@ -1,63 +1,41 @@
-# 08 — Orchestration
+# 08 — Orchestration: Zero to Production Pro
 
-## Tool Comparison
-| Tool | Style | Best For |
-|---|---|---|
-| **Airflow** | DAG (Python), mature, huge ecosystem | Industry standard, complex scheduling, big community/plugins |
-| **Prefect** | Python-native, dynamic flows | Simpler local dev experience, dynamic task generation |
-| **Dagster** | Asset-based (not just tasks) | Strong data-lineage/testing focus, "software-defined assets" |
-| **cron (legacy)** | OS-level scheduler | Simple single scripts, no dependency graph/monitoring/retries |
+Orchestration is the "conductor" of a data platform — deciding WHEN pipelines run, WHAT ORDER tasks execute in, WHAT HAPPENS on failure, and giving visibility into whether last night's 200 interdependent jobs actually succeeded. This module takes you from "what even is orchestration" to running production-grade Airflow (and knowing when Dagster/Prefect are the better call) at real company scale.
 
-## Airflow DAG
-See full example: [`../04-etl-elt/airflow/etl_dag_example.py`](../04-etl-elt/airflow/etl_dag_example.py)
+## 📖 Learning Path
 
-## Prefect example
-```python
-from prefect import flow, task
+| # | File | Level | Covers |
+|---|---|---|---|
+| 1 | [`01-what-is-orchestration.md`](./01-what-is-orchestration.md) | Beginner | Why cron isn't enough, the DAG concept, history |
+| 2 | [`02-airflow-architecture-deep-dive.md`](./02-airflow-architecture-deep-dive.md) | Intermediate | Scheduler, Webserver, Executor, Workers, Metadata DB |
+| 3 | [`03-airflow-dag-authoring.md`](./03-airflow-dag-authoring.md) | Intermediate | Operators, Sensors, XComs, Task Groups, dependencies |
+| 4 | [`04-airflow-production-patterns.md`](./04-airflow-production-patterns.md) | Advanced | Dynamic DAGs, backfills, SLAs, retries, idempotency, real gotchas |
+| 5 | [`05-dagster-deep-dive.md`](./05-dagster-deep-dive.md) | Advanced | Software-Defined Assets — a genuinely different philosophy |
+| 6 | [`06-prefect-deep-dive.md`](./06-prefect-deep-dive.md) | Advanced | Dynamic, Pythonic flows — the developer-experience-first orchestrator |
+| 7 | [`07-orchestrator-comparison.md`](./07-orchestrator-comparison.md) | Production | Airflow vs Dagster vs Prefect vs cloud-native — real decision framework |
+| 8 | [`08-monitoring-alerting-observability.md`](./08-monitoring-alerting-observability.md) | Production | SLAs, alerting design, data observability, on-call reality |
+| 9 | [`09-what-companies-use.md`](./09-what-companies-use.md) | Production | Airbnb, Spotify, Netflix — real orchestration stacks |
+| — | [`case-studies/`](./case-studies/) | Production | Full 200+ pipeline metadata-driven orchestration design |
+| — | [`interview-questions.md`](./interview-questions.md) | All levels | 35+ Q&A across the whole module |
 
-@task(retries=3, retry_delay_seconds=30)
-def extract():
-    return {"rows": 100}
-
-@task
-def transform(data):
-    data["rows"] *= 2
-    return data
-
-@task
-def load(data):
-    print(f"Loaded {data['rows']} rows")
-
-@flow(name="orders-pipeline")
-def orders_pipeline():
-    raw = extract()
-    transformed = transform(raw)
-    load(transformed)
-
-if __name__ == "__main__":
-    orders_pipeline()
+## 🗺️ Suggested Path
+```
+Total beginner:      01 -> 02 -> 03
+Building real DAGs:  04 (this is where most real production knowledge lives)
+Exploring alternatives: 05 -> 06 -> 07
+Running it for real: 08 + case-studies/
+Interview prep:       09 + interview-questions.md
 ```
 
-## Dagster example (asset-based)
-```python
-from dagster import asset, Definitions
 
-@asset
-def raw_orders():
-    return {"rows": 100}
+---
 
-@asset
-def cleaned_orders(raw_orders):
-    raw_orders["rows"] *= 2
-    return raw_orders
+<div align="center">
 
-defs = Definitions(assets=[raw_orders, cleaned_orders])
-```
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
 
-## Choosing an orchestrator
-```
-Need battle-tested, huge plugin ecosystem, enterprise standard -> Airflow
-Need quick Pythonic flows, less boilerplate, dynamic tasks     -> Prefect
-Need strong asset lineage + testing built-in                   -> Dagster
-Single simple daily script, no dependencies to manage          -> cron (fine for very small scale)
-```
+*"Real knowledge liberates; hoarded knowledge only isolates."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

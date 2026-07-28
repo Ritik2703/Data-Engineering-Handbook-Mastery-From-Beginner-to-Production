@@ -93,3 +93,16 @@ Need to preserve full history of changes           -> SCD Type 2 for that dimens
 ## Interview Traps
 - Being asked to design a star schema for "an e-commerce company" — always clarify grain first ("one row per order? per order line item?") before designing the fact table.
 - SCD Type 2 is the single most commonly asked modeling question — know the exact column pattern (`start_date`, `end_date`, `is_current`) cold.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"The one who keeps learning without attachment to being 'the expert' is the one who truly grows."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

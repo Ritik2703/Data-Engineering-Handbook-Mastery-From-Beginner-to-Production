@@ -35,3 +35,16 @@ Day 14+:   case-studies/ + interview-questions.md  -> apply everything to real s
 
 ## 🏢 Why "real industry examples" matter
 Textbook SQL problems ("find the second highest salary") teach syntax but not **judgment** — knowing *which* concept to reach for and *why*. Every file in this module pairs each concept with a **real business scenario** a product company actually solves with it, so you build the instinct: "this smells like a window function problem" or "this needs a self-join."
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"Let go of the need to be right, and you will finally hear what the data is actually saying."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

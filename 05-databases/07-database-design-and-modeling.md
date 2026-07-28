@@ -120,3 +120,16 @@ This is exactly the OLTP-to-OLAP transformation pipeline that ETL/ELT tools (`04
 - "Design a database for X" questions are extremely common — always start by asking/stating the KEY QUERIES the system must support before drawing any tables; jumping straight to schema design without this step is a common signal of weaker design instinct.
 - Be ready to justify ANY denormalization decision with a specific business reason (like the historical price example above), not just "it's faster."
 - "UUID or auto-increment for a new table's primary key?" — a nuanced answer depends on whether the system is distributed/multi-region, and whether ID predictability is a security concern — not a one-size-fits-all answer.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"The one who works without attachment to praise builds the most enduring things."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

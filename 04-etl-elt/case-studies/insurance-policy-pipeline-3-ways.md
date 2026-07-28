@@ -125,3 +125,16 @@ LEFT JOIN {{ ref('customer_snapshot') }} c
 
 ## The Actual Lesson From This Case Study
 All three versions solve the **exact same business problem** (SCD2-tracked customer dimension feeding a policy fact table) — the tool changes, but the underlying concepts (staging, incremental watermark, SCD2 dimension tracking, error/unmatched-row handling, failure alerting) are **identical across all three**. This is why this module teaches concepts first, tools second — once you deeply understand what needs to happen, picking up any specific tool's syntax becomes much faster.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"The student who respects the fundamentals will always outlast the one who skips them."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

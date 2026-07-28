@@ -213,3 +213,16 @@ except ClientError as e:
 1. Write a function that uploads a pandas DataFrame directly to S3 as Parquet, without a local temp file.
 2. Write a Glue job trigger function that polls until completion and logs the final status.
 3. Retrieve database credentials from Secrets Manager and use them to connect to Redshift.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"Do the difficult, honest work quietly; let the results speak in their own time."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

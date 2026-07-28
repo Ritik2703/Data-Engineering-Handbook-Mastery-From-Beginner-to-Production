@@ -62,3 +62,16 @@ WHERE order_id = 500 AND version = 3;  -- fails/no-op if another process already
 ## Interview Traps
 - Explain MVCC in plain language: "readers don't block writers, writers don't block readers, everyone sees a consistent snapshot" — this is why Postgres feels fast under concurrent read/write load.
 - Be ready to describe a real deadlock scenario and the standard fix (consistent lock ordering).
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"The one who masters their reactions masters far more than the one who only masters their tools."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

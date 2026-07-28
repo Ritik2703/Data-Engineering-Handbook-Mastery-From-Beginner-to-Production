@@ -126,3 +126,16 @@ WHERE EXISTS (SELECT 1 FROM orders o WHERE o.customer_id = c.customer_id);
 ## Interview Traps
 - Explain the `NOT IN` + NULL trap above — this is a very common "found a bug in production" interview story prompt.
 - "When would you use EXISTS over IN?" — mention performance on large subqueries and NULL-safety.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"A steady, humble learner outlasts a proud one who stopped asking questions."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

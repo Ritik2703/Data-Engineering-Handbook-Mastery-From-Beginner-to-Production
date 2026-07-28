@@ -120,3 +120,16 @@ ORDER BY streak_days DESC;
 
 ## Takeaway
 Notice how the **same handful of SQL patterns** (window functions, conditional aggregation, gaps & islands, joining differently-grained aggregates) solve completely different business problems across completely different companies. Master the patterns once, apply them everywhere — that's the real skill product companies test for.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"Stay rooted in your values even when the shortcuts look tempting."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

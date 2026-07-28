@@ -180,3 +180,16 @@ GROUP BY DATE_TRUNC('month', activity_date);
 ---
 
 **Practice tip**: Don't memorize these answers word-for-word. Open [`sql-playground.html`](./sql-playground.html), rebuild each query yourself against the sample schema, and explain out loud *why* you reached for that specific concept. That's what actually gets tested in a live interview.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"The calm architect designs better systems than the anxious one rushing to finish."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

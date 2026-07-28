@@ -205,3 +205,16 @@ from extractors.api_extractor import fetch_orders
 2. Write a generator that reads a file and yields one line at a time, uppercased.
 3. Write a decorator that logs how long a function took to run.
 4. Build a simple `BaseExtractor` class with two subclasses for two different fake data sources.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"Wisdom is choosing the harder right over the easier wrong, again and again, quietly."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

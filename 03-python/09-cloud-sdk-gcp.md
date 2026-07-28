@@ -189,3 +189,16 @@ except GoogleAPIError as e:
 1. Write a function that queries BigQuery and returns results directly as a pandas DataFrame.
 2. Load a local Parquet file into GCS, then load it from GCS into a BigQuery table.
 3. Retrieve a secret from Secret Manager and use it to authenticate a Cloud SQL connection.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"Service done without expectation of return is the purest form of growth."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>

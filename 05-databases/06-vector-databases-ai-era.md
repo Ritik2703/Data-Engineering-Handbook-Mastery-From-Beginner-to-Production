@@ -125,3 +125,16 @@ Already running Redis for caching, want to add vector search without a new syste
 - "Why can't you just use a normal SQL `WHERE` clause for semantic search?" — exact-match/range queries can't capture semantic similarity; you need distance calculations in high-dimensional vector space, which requires specialized indexing (HNSW/IVF) for performance at scale.
 - "When would you choose pgvector over a dedicated vector database?" — when you value architectural simplicity (one database instead of two), your scale is moderate, and you want to combine vector search with normal relational filters/joins in the same query — a very common and increasingly popular real-world choice in 2026.
 - Be ready to describe the RAG pattern end-to-end — it's one of the most commonly asked "explain a modern AI-adjacent architecture" questions in current DE interviews.
+
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"Gratitude for what you have already learned makes room for what you have yet to learn."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>
