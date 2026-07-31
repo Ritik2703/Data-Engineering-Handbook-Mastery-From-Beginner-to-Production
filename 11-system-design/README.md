@@ -1,54 +1,52 @@
-# 11 — System Design for Data Engineers
+# 11 — System Design for Data Engineers: The Golden Module (Zero to Hero)
 
-## Case Study 1: Design a pipeline to ingest e-commerce clickstream + order data for analytics
+**This is the module that separates a Data Engineer from a Senior Data Engineer / Data Architect.** Knowing SQL, Spark, Airflow, and cloud tools makes you competent. Knowing how to take a vague business problem, ask the right questions, weigh real tradeoffs, and design a system that will still work when data volume grows 100x — THAT is what gets you promoted, and what every senior/staff/architect interview is actually testing.
 
-```mermaid
-flowchart LR
-    A[Web/App Clickstream] -->|Kafka producer| B[(Kafka)]
-    C[Orders DB - Postgres] -->|CDC via Debezium| B
-    B --> D[Spark Structured Streaming]
-    D --> E[(S3 / ADLS - raw + curated)]
-    E --> F[Snowflake / BigQuery]
-    F --> G[Power BI / Tableau]
-    H[Airflow] -.orchestrates batch jobs.-> D
-    H -.orchestrates.-> F
+## 📖 Learning Path
+
+| # | File | Level | Covers |
+|---|---|---|---|
+| 1 | [`01-what-is-system-design-for-de.md`](./01-what-is-system-design-for-de.md) | Foundational | Why this is THE differentiator; junior vs senior vs architect thinking |
+| 2 | [`02-requirements-gathering-framework.md`](./02-requirements-gathering-framework.md) | Core Skill | Functional/non-functional requirements, the questions that matter |
+| 3 | [`03-architecture-patterns-deep-dive.md`](./03-architecture-patterns-deep-dive.md) | Core Skill | Lambda/Kappa/Medallion in depth, monolith vs microservices for data |
+| 4 | [`04-scalability-patterns-deep-dive.md`](./04-scalability-patterns-deep-dive.md) | Core Skill | Every scaling pattern, unified across DB/pipeline/platform level |
+| 5 | [`05-data-modeling-for-system-design.md`](./05-data-modeling-for-system-design.md) | Core Skill | Choosing the right model under real system constraints |
+| 6 | [`06-reliability-fault-tolerance-patterns.md`](./06-reliability-fault-tolerance-patterns.md) | Core Skill | Designing for failure, not around it |
+| 7 | [`07-capacity-estimation-back-of-envelope.md`](./07-capacity-estimation-back-of-envelope.md) | Core Skill | The math interviewers expect you to do live |
+| 8 | [`08-tradeoff-analysis-framework.md`](./08-tradeoff-analysis-framework.md) | Core Skill | How to reason about ANY tradeoff systematically |
+| 9 | [`09-senior-de-vs-architect-mindset.md`](./09-senior-de-vs-architect-mindset.md) | Career-defining | What actually changes as you go from DE → Senior → Architect |
+| 10 | [`10-interview-framework-how-to-answer.md`](./10-interview-framework-how-to-answer.md) | Interview Prep | A repeatable structure for ANY system design interview question |
+| — | [`case-studies/`](./case-studies/) | Production | 7 FULL, deeply detailed data engineering system designs |
+| — | [`interview-questions.md`](./interview-questions.md) | All levels | 30+ system design prompts with guided solution approaches |
+
+## 🎯 Why This Module Is Called "Golden"
+```
+Every other module in this repo teaches you a TOOL (SQL, Spark, Airflow,
+a specific cloud service). This module teaches you JUDGMENT — the thing
+that decides WHICH tool, WHY, and WHAT TRADEOFF you're accepting by
+choosing it. You cannot look this up in documentation. It's built through
+deliberate practice, and it is EXACTLY what separates a Data Engineer
+who executes a given design from a Senior Data Engineer / Architect who
+CREATES the design others execute.
 ```
 
-**Key decisions to discuss in an interview:**
-- Streaming (Kafka+Spark) for clickstream because of volume/velocity; CDC (Debezium/DMS) for OLTP orders to avoid hammering the production DB.
-- Lambda vs Kappa architecture: Lambda = separate batch + speed layers (more complex, handles reprocessing well); Kappa = everything through streaming layer, replay from log for reprocessing (simpler, needs long retention).
-- Partition strategy in the lake: by `event_date` for time-based pruning.
-- Data quality gate before the curated zone — bad data should not reach BI dashboards.
-
-## Case Study 2: Design a Slowly Changing customer dimension pipeline at scale
-```mermaid
-flowchart TD
-    A[Source CRM API] --> B[Raw landing S3]
-    B --> C{dbt: detect changes}
-    C -->|New/Changed| D[Insert new SCD2 row + close old row]
-    C -->|Unchanged| E[Skip]
-    D --> F[dim_customer table]
-    F --> G[fact tables join on current + historical versions]
+## 🗺️ Suggested Path
+```
+First time with system design:  01 -> 02 -> 03 -> 07 -> 10
+Building real judgment:          04 -> 05 -> 06 -> 08
+Career growth focus:              09 (read this even if you skip everything else)
+Interview prep:                   case-studies/ (work through ALL 7) + interview-questions.md
 ```
 
-## Scalability Patterns
-- **Partitioning** — split data by date/region so queries scan less.
-- **Sharding** — split OLTP DB horizontally across servers by key (customer_id range/hash).
-- **Read replicas** — offload reporting queries from the primary transactional DB.
-- **Caching layer** (Redis) — for frequently-hit aggregates in dashboards.
-- **Idempotent pipelines** — design loads so re-running a failed job doesn't duplicate data (use MERGE/UPSERT, not blind INSERT).
-- **Backfill strategy** — parametrize DAGs by execution date so historical reprocessing is a config change, not a rewrite.
 
-## Real-World Architecture Reference Patterns
-- **Medallion Architecture** (Databricks): Bronze (raw) → Silver (cleaned/conformed) → Gold (business-level aggregates for BI).
-- **Lambda Architecture**: batch layer (accuracy) + speed layer (low latency) merged at serving layer.
-- **Kappa Architecture**: single streaming pipeline, reprocess via replay instead of maintaining a separate batch layer.
+---
 
-## Interview Framework (how to answer any system design question)
-```
-1. Clarify requirements: data volume, latency needs (real-time vs daily batch), consumers of the data
-2. Sketch high-level flow: source -> ingestion -> storage -> processing -> serving
-3. Pick specific tools and justify tradeoffs (not just name-drop)
-4. Discuss scalability, fault tolerance, data quality, cost
-5. Mention monitoring/alerting (e.g., Airflow SLA misses, DQ check failures -> Slack/PagerDuty)
-```
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"To simplify wisely takes more understanding than to complicate cleverly."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>
