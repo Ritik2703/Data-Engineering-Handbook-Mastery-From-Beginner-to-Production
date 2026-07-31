@@ -1,42 +1,54 @@
-# 12 — Interview Prep
+# 12 — Interview Prep: From Application to Offer
 
-## SQL Questions
-1. Find the 2nd/Nth highest salary per department. *(see `02-sql/all-scenarios-queries.sql`)*
-2. Find customers who ordered in every month of the year (all-months pattern — use `COUNT(DISTINCT month) = 12`).
-3. Detect duplicate rows and remove them keeping the latest.
-4. Write a query to find consecutive login streaks (gaps & islands).
-5. Difference between `RANK()`, `DENSE_RANK()`, `ROW_NUMBER()` — give an example where results differ.
-6. Explain `WHERE` vs `HAVING` vs `QUALIFY` (Snowflake-specific).
-7. Write a self-join to find employees who earn more than their manager.
-8. Explain index types and when a query would NOT use an available index.
+The capstone module. Modules 01-11 built your actual knowledge and judgment. This module is about PACKAGING and PRESENTING that knowledge to actually land the job — resume, behavioral interviews, technical screens, live coding, system design interviews, take-homes, and finally negotiating the offer.
 
-## Python Questions
-1. Difference between a list, tuple, set, and dict — time complexity of lookups.
-2. How would you process a file too large to fit in memory? (chunking with pandas `chunksize`, or generators)
-3. Write a function to deduplicate a list of dicts by a key, keeping the latest by timestamp.
-4. Explain `*args`, `**kwargs`, decorators, and generators with a data pipeline example (e.g., a retry decorator).
-5. How do you handle API rate limits in a Python extraction script? (exponential backoff, `tenacity`, sleep between calls)
-6. Multiprocessing vs multithreading vs asyncio — which for I/O-bound API calls? (asyncio or threading — GIL released during I/O wait)
+## 📖 Learning Path
 
-## ETL / Data Modeling Questions
-1. Explain SCD Type 1 vs 2 vs 3 with an example.
-2. ETL vs ELT — when would you pick one over the other?
-3. How do you design a pipeline to be idempotent (safe to re-run)?
-4. How do you handle schema evolution (new column appears in source)?
-5. Star schema vs Data Vault — tradeoffs for a fast-changing source system.
-6. How would you implement incremental loading from a source with no `updated_at` column? (CDC via binlog/WAL, or full snapshot diff)
+| # | File | Covers |
+|---|---|---|
+| 1 | [`01-interview-process-overview.md`](./01-interview-process-overview.md) | What to expect: typical rounds, timeline, what each stage tests |
+| 2 | [`02-resume-and-portfolio.md`](./02-resume-and-portfolio.md) | Presenting DE skills, project portfolio, what recruiters scan for |
+| 3 | [`03-behavioral-interview-mastery.md`](./03-behavioral-interview-mastery.md) | STAR method, the real questions behind the questions |
+| 4 | [`04-technical-screening-prep.md`](./04-technical-screening-prep.md) | What a recruiter/hiring manager screen actually tests |
+| 5 | [`05-live-coding-sql-python-strategy.md`](./05-live-coding-sql-python-strategy.md) | HOW to approach live coding, not just what to know |
+| 6 | [`06-take-home-assignment-strategy.md`](./06-take-home-assignment-strategy.md) | What separates a good take-home from a great one |
+| 7 | [`07-system-design-interview-strategy.md`](./07-system-design-interview-strategy.md) | Applying module 11 live, under interview conditions |
+| 8 | [`08-negotiation-and-offer-evaluation.md`](./08-negotiation-and-offer-evaluation.md) | Evaluating and negotiating an offer properly |
+| 9 | [`09-90-day-study-plan.md`](./09-90-day-study-plan.md) | A structured plan tying this entire repo together |
+| 10 | [`10-common-mistakes-and-red-flags.md`](./10-common-mistakes-and-red-flags.md) | What actually fails candidates, from both sides of the table |
+| — | [`case-studies/`](./case-studies/) | Full mock interview transcripts, annotated |
+| — | [`master-question-bank.md`](./master-question-bank.md) | Curated cross-module question index for final revision |
 
-## System Design Questions
-1. Design a data pipeline to ingest IoT sensor data at 1M events/sec.
-2. Design a near-real-time fraud detection pipeline for a payments company.
-3. Design a data warehouse for a multi-country e-commerce company (currency, timezone, locale considerations).
-4. How would you migrate a legacy on-prem SSIS/Informatica ETL suite to a cloud-native stack?
-5. How do you monitor pipeline health and alert on failures/SLA breaches at scale (100s of DAGs)?
+## 🎯 The Honest Truth This Module Starts With
+```
+Knowing the material (modules 01-11) is necessary but NOT sufficient.
+Countless genuinely knowledgeable candidates fail interviews because of
+POOR PRESENTATION, not poor knowledge — rambling answers, no structure,
+failing to demonstrate reasoning process, weak behavioral stories, or
+a resume that never gets past the initial screen. This module closes
+THAT gap specifically.
+```
 
-## Behavioral (common for DE roles)
-1. Tell me about a time a pipeline failed in production — how did you debug and fix it?
-2. Describe a time you had to push back on unrealistic data requirements/timelines.
-3. How do you handle disagreements with a data analyst about a metric definition?
-4. Tell me about the most complex data pipeline you've built end-to-end.
+## 🗺️ Suggested Path
+```
+Just starting to apply:     01 -> 02 (get the resume/process right first)
+Interview scheduled soon:    03 -> 04 -> 05 -> 06 -> 07 (in the order
+                              your actual interview rounds will happen)
+Received an offer:            08
+Long-term structured prep:    09 (use this to sequence your study across
+                               this entire repo)
+Final week before interview:  10 + master-question-bank.md + case-studies/
+```
 
-> Tip: for every answer, use the **STAR format** (Situation, Task, Action, Result) and quantify impact where possible (e.g., "reduced pipeline runtime by 40%", "cut cloud costs by $2k/month via partition pruning").
+
+---
+
+<div align="center">
+
+🙏 **राधे राधे | जय श्री हरिवंश** 🙏
+
+*"Gratitude for the chance to be tested keeps the heart light, whatever the outcome."*
+
+📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+
+</div>
