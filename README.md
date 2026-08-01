@@ -1,10 +1,10 @@
 # 🏆 Data Engineering Handbook: Mastery From Beginner to Production
 
-A complete, zero-to-hero Data Engineering curriculum — 15 modules covering everything from absolute fundamentals to system design judgment that separates a Data Engineer from a Senior/Architect, plus the governance, quality, and MLOps maturity that separates a "best possible" resource from a good one. Legacy tools AND cutting-edge tech, both covered honestly, side by side, with real company context throughout.
+A complete, zero-to-hero Data Engineering curriculum — 16 modules covering everything from absolute fundamentals to system design judgment that separates a Data Engineer from a Senior/Architect, the governance/quality/MLOps maturity that separates a "best possible" resource from a good one, AND the 2026 frontier of AI-native data engineering (RAG, MCP, AI agents). Legacy tools AND cutting-edge tech, both covered honestly, side by side, with real company context throughout.
 
 > 🗺️ New here? Start with [`ROADMAP.md`](./ROADMAP.md) for a full stage-by-stage learning path through this entire repo.
 
-## 📚 All 15 Modules
+## 📚 All 16 Modules
 
 | # | Module | Covers |
 |---|---|---|
@@ -23,6 +23,7 @@ A complete, zero-to-hero Data Engineering curriculum — 15 modules covering eve
 | 13 | [`13-projects/`](./13-projects/) | 6 full end-to-end pipelines — legacy stack to modern cloud stack |
 | 14 | [`14-internal-tools/`](./14-internal-tools/) | Bonus: Jira, Confluence, Slack, PagerDuty — the tools nobody teaches |
 | 15 | [`15-governance-quality-mlops/`](./15-governance-quality-mlops/) | Data governance (GDPR/CCPA), catalogs, MDM, data quality/observability, MLOps, Data Mesh deep dive |
+| 16 | [`16-ai-mcp-llm-pipelines/`](./16-ai-mcp-llm-pipelines/) | 🆕 RAG, Model Context Protocol (MCP), building your own MCP server, AI agents, AI-powered BI (Tableau/Power BI) |
 
 ## 🎯 What Makes This Repo Different
 ```

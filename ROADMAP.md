@@ -97,6 +97,22 @@ Milestone: you can design a governance program for a regulated
            as a buzzword.
 ```
 
+## Stage 5.5: The AI Frontier (Ongoing, from Month 10+ — Genuinely Optional but Increasingly Expected)
+```
+Goal: understand and be able to build the AI-native layer of modern
+      data platforms — the single fastest-growing skill area in the field.
+
+Path: 16-ai-mcp-llm-pipelines (all of it) — build the MCP server in
+      file 5 yourself, don't just read it; connect it to a real (or
+      test) database and actually query it via an AI client.
+
+Milestone: you can explain what MCP solves and why, you've built a
+           genuinely working MCP server with proper safety guardrails,
+           and you can discuss the honest limits of AI agents in
+           production (not overselling autonomous magic, not dismissing
+           genuine current usefulness).
+```
+
 ## Stage 5: Interview-Ready (The Final Stretch Before Actively Applying)
 ```
 Goal: package everything above into interview performance.

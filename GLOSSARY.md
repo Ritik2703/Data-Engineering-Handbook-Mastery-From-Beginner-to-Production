@@ -4,6 +4,7 @@ A single, repo-wide reference. Each module also has its own embedded terminology
 
 **ACID** — Atomicity, Consistency, Isolation, Durability; transactional guarantees. *(01, 05)*
 **Airflow** — Open-source workflow orchestration tool using Python-defined DAGs. *(08)*
+**AI Agent** — An LLM given tools and a loop (observe-reason-act-repeat) to complete multi-step tasks autonomously. *(16)*
 **Anonymization** — Irreversibly removing an individual's identifiability from data. *(15)*
 **Backpressure** — What happens when ingestion rate exceeds processing rate. *(11)*
 **Blast Radius** — How much of a system is affected if a component fails. *(10, 11)*
@@ -38,6 +39,7 @@ A single, repo-wide reference. Each module also has its own embedded terminology
 **Lambda Architecture** — Separate batch and speed layers, merged at a serving layer. *(01, 11)*
 **Lineage** — A traceable graph of where data came from and what depends on it. *(15)*
 **LookML** — Looker's semantic modeling language, defining metrics once centrally. *(09)*
+**MCP (Model Context Protocol)** — An open standard letting AI models connect to external data systems via standardized servers. *(16)*
 **MDM (Master Data Management)** — Reconciling entity data across systems into golden records. *(15)*
 **Medallion Architecture** — See Bronze/Silver/Gold. *(01, 06, 13)*
 **MLOps** — Practices for reliably deploying/monitoring ML models in production. *(15)*
@@ -46,8 +48,9 @@ A single, repo-wide reference. Each module also has its own embedded terminology
 **OLAP/OLTP** — Online Analytical Processing vs Online Transaction Processing. *(01, 05)*
 **Partitioning** — Splitting data physically by a column (often date) for query pruning. *(01, 05, 06)*
 **Policy as Code** — Enforcing governance rules automatically in CI/CD. *(15)*
+**Prompt Injection** — An attack embedding hidden instructions in untrusted content an AI model processes. *(16)*
 **RACI** — Responsible, Accountable, Consulted, Informed — a role-clarity framework. *(15)*
-**RAG (Retrieval-Augmented Generation)** — Retrieving relevant data to ground an LLM's answer. *(05)*
+**RAG (Retrieval-Augmented Generation)** — Retrieving relevant data to ground an LLM's answer. *(05, 16)*
 **Replication** — Copying data across nodes for availability/read scaling. *(01, 05)*
 **RPO/RTO** — Recovery Point/Time Objective; how much data loss / downtime is tolerable. *(11)*
 **Schema-on-Read/Write** — Schema applied at query time (lake) vs at write time (warehouse). *(01)*
