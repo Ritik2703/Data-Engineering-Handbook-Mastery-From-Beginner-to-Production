@@ -16,6 +16,7 @@ The complete Big Data module — from "what even IS big data and why does Hadoop
 | 8 | [`08-big-data-on-cloud.md`](./08-big-data-on-cloud.md) | Advanced | EMR, Databricks, Dataproc, Synapse Spark Pools compared |
 | 9 | [`09-what-companies-use.md`](./09-what-companies-use.md) | Production | Netflix, Uber, LinkedIn, Airbnb, Meta big data stacks |
 | 10 | [`10-pyspark-code-examples.md`](./10-pyspark-code-examples.md) | Practical | Extensive, runnable-style PySpark patterns for real scenarios |
+| 11 | [`11-scala-for-spark.md`](./11-scala-for-spark.md) | Practical | Why Spark is written in Scala, reading Scala Spark code, when it genuinely matters vs PySpark |
 | — | [`case-studies/`](./case-studies/) | Production | Full real-world big data pipeline architecture |
 | — | [`interview-questions.md`](./interview-questions.md) | All levels | 40+ Q&A across the whole module |
 
