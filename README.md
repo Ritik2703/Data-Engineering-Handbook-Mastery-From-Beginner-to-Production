@@ -49,7 +49,7 @@ Just landed your first DE job?    -> 14-internal-tools + revisit 10-devops
 ## 📖 Additional Resources
 - [`RESOURCES.md`](./RESOURCES.md) — Curated YouTube channels, blogs, books, courses, and communities
 - [`ROADMAP.md`](./ROADMAP.md) — The complete stage-by-stage path through this repo
-- [`MASTER_GLOSSARY.md`](./MASTER_GLOSSARY.md) — A-Z cross-module terminology index for quick interview revision
+- [`GLOSSARY.md`](./GLOSSARY.md) — A-Z cross-module terminology index for quick interview revision
 - [`CONTRIBUTING.md`](./CONTRIBUTING.md) — How to contribute to this repo
 
 ## 🤝 Contributing
