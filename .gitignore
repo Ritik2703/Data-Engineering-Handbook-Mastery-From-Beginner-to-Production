@@ -12,3 +12,4 @@ dbt_packages/
 *.csv
 credentials.json
 *.pem
+assets/
