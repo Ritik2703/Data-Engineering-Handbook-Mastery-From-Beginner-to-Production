@@ -7,7 +7,7 @@
 [![Modules](https://img.shields.io/badge/Modules-16-38bdf8?style=for-the-badge)](#-all-16-modules)
 [![License: MIT](https://img.shields.io/badge/License-MIT-34d399?style=for-the-badge)](./LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-f472b6?style=for-the-badge)](./CONTRIBUTING.md)
-[![Made with](https://img.shields.io/badge/Made%20with-%E2%9D%A4%EF%B8%8F%20%26%20Coffee-818cf8?style=for-the-badge)](#)
+[![Made with](https://img.shields.io/badge/Made%20with-%E2%9D%A4%20Hari%20naam-818cf8?style=for-the-badge)](#)
 [![Level](https://img.shields.io/badge/Level-Beginner%20to%20Architect-f59e0b?style=for-the-badge)](#-all-16-modules)
 
 <br/>
