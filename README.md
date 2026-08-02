@@ -16,7 +16,7 @@
 
 <br/>
 
-**[🚀 Start the Roadmap](./ROADMAP.md)** &nbsp;•&nbsp; **[📚 Browse All Modules](#-all-16-modules)** &nbsp;•&nbsp; **[📖 Resources](./RESOURCES.md)** &nbsp;•&nbsp; **[📇 Glossary](./MASTER_GLOSSARY.md)**
+**[🚀 Start the Roadmap](./ROADMAP.md)** &nbsp;•&nbsp; **[📚 Browse All Modules](#-all-16-modules)** &nbsp;•&nbsp; **[📖 resources](./resources.md)** &nbsp;•&nbsp; **[📇 Glossary](./GLOSSARY.md)**
 
 </div>
 
@@ -184,12 +184,12 @@ open ROADMAP.md   # start here
 
 <br/>
 
-## 📖 Additional Resources
+## 📖 Additional resources
 
 | File | Purpose |
 |---|---|
 | [`ROADMAP.md`](./ROADMAP.md) | The complete stage-by-stage path through this repo |
-| [`RESOURCES.md`](./RESOURCES.md) | Curated YouTube channels, blogs, books, courses, communities |
+| [`resources.md`](./resources.md) | Curated YouTube channels, blogs, books, courses, communities |
 | [`GLOSSARY.md`](./GLOSSARY.md) | A-Z cross-module terminology index for quick interview revision |
 | [`CONTRIBUTING.md`](./CONTRIBUTING.md) | How to contribute to this repo |
 
