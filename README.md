@@ -7,7 +7,7 @@
 [![Modules](https://img.shields.io/badge/Modules-16-38bdf8?style=for-the-badge)](#-all-16-modules)
 [![License: MIT](https://img.shields.io/badge/License-MIT-34d399?style=for-the-badge)](./LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-f472b6?style=for-the-badge)](./CONTRIBUTING.md)
-[![Made with](https://img.shields.io/badge/Made%20with-%E2%9D%A4%EF%B8%8F%20%26%20Coffee-818cf8?style=for-the-badge)](#)
+[![Made with](https://img.shields.io/badge/Made%20with-%E2%9D%A4%20Hari%20naam-818cf8?style=for-the-badge)](#)
 [![Level](https://img.shields.io/badge/Level-Beginner%20to%20Architect-f59e0b?style=for-the-badge)](#-all-16-modules)
 
 <br/>
@@ -16,7 +16,7 @@
 
 <br/>
 
-**[🚀 Start the Roadmap](./ROADMAP.md)** &nbsp;•&nbsp; **[📚 Browse All Modules](#-all-16-modules)** &nbsp;•&nbsp; **[📖 Resources](./RESOURCES.md)** &nbsp;•&nbsp; **[📇 Glossary](./MASTER_GLOSSARY.md)**
+**[🚀 Start the Roadmap](./ROADMAP.md)** &nbsp;•&nbsp; **[📚 Browse All Modules](#-all-16-modules)** &nbsp;•&nbsp; **[📖 resources](./resources.md)** &nbsp;•&nbsp; **[📇 Glossary](./GLOSSARY.md)**
 
 </div>
 
@@ -184,12 +184,12 @@ open ROADMAP.md   # start here
 
 <br/>
 
-## 📖 Additional Resources
+## 📖 Additional resources
 
 | File | Purpose |
 |---|---|
 | [`ROADMAP.md`](./ROADMAP.md) | The complete stage-by-stage path through this repo |
-| [`RESOURCES.md`](./RESOURCES.md) | Curated YouTube channels, blogs, books, courses, communities |
+| [`resources.md`](./resources.md) | Curated YouTube channels, blogs, books, courses, communities |
 | [`GLOSSARY.md`](./GLOSSARY.md) | A-Z cross-module terminology index for quick interview revision |
 | [`CONTRIBUTING.md`](./CONTRIBUTING.md) | How to contribute to this repo |
 
