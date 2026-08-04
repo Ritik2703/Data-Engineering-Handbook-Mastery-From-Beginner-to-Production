@@ -79,7 +79,7 @@ flowchart TD
 ```
 
 <div align="center">
-<sub> Pink = the "Golden Module" that separates a Data Engineer from a Senior/Architect &nbsp;|&nbsp; 🟢 Green = the 2026 AI frontier</sub>
+<sub> Pink = the "Golden Module" that separates a Data Engineer from a Senior/Architect &nbsp;|&nbsp; Green = the 2026 AI frontier</sub>
 </div>
 
 <br/>
@@ -120,10 +120,10 @@ flowchart TD
 
 | # | Module | Covers |
 |---|---|---|
-| 11 | [`11-system-design/`](./11-system-design/) | 🏅 **The Golden Module** — the judgment that makes you Senior/Architect, 7 full case studies |
+| 11 | [`11-system-design/`](./11-system-design/) | **The Golden Module** — the judgment that makes you Senior/Architect, 7 full case studies |
 | 12 | [`12-interview-prep/`](./12-interview-prep/) | Resume, behavioral, technical, system design interviews, negotiation |
 | 13 | [`13-projects/`](./13-projects/) | 6 full end-to-end pipelines — legacy stack **to** modern cloud stack |
-| 14 | [`14-internal-tools/`](./14-internal-tools/) | 🎁 Bonus: Jira, Confluence, Slack, PagerDuty — the tools nobody teaches |
+| 14 | [`14-internal-tools/`](./14-internal-tools/) | Bonus: Jira, Confluence, Slack, PagerDuty — the tools nobody teaches |
 
 </details>
 
@@ -134,7 +134,7 @@ flowchart TD
 | # | Module | Covers |
 |---|---|---|
 | 15 | [`15-governance-quality-mlops/`](./15-governance-quality-mlops/) | GDPR/CCPA, data catalogs, MDM, data quality/observability, MLOps, Data Mesh |
-| 16 | [`16-ai-mcp-llm-pipelines/`](./16-ai-mcp-llm-pipelines/) | 🆕 RAG, **Model Context Protocol (MCP)**, build your own MCP server, AI agents, AI-powered BI |
+| 16 | [`16-ai-mcp-llm-pipelines/`](./16-ai-mcp-llm-pipelines/) | RAG, **Model Context Protocol (MCP)**, build your own MCP server, AI agents, AI-powered BI |
 
 </details>
 
