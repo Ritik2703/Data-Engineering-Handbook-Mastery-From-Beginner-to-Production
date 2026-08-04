@@ -12,7 +12,7 @@
 
 <br/>
 
-### 🎯 The only Data Engineering resource that teaches you **WHY** before **HOW** — <br/>from your first `SELECT` statement to building your own **AI agents and MCP servers**.
+### The only Data Engineering resource that teaches you **WHY** before **HOW** — <br/>from your first `SELECT` statement to building your own **AI agents and MCP servers**.
 
 <br/>
 
@@ -22,28 +22,28 @@
 
 <br/>
 
-## 💡 Why This Repo Exists
+## Why This Repo Exists
 
 > Most Data Engineering content teaches **syntax**. It rarely teaches **judgment** — why Kafka exists, why Netflix built Iceberg instead of using Hive, or why a Senior Data Engineer reasons differently than a junior one about the exact same problem.
 
 This handbook was built to close that gap — **one consistent pattern, repeated across 16 modules and 200+ files**:
 
 <table>
-<tr><td width="20%" align="center"><b>1️⃣ WHAT</b></td><td>Plain-language definition — no jargon assumed</td></tr>
-<tr><td align="center"><b>2️⃣ WHY</b></td><td>The real production/business problem it solved, and at which company</td></tr>
-<tr><td align="center"><b>3️⃣ HOW</b></td><td>Mechanics, with real code — not toy pseudocode</td></tr>
-<tr><td align="center"><b>4️⃣ THEN vs NOW</b></td><td>Legacy tool ↔ modern tool, mapped side by side</td></tr>
-<tr><td align="center"><b>5️⃣ WHO</b></td><td>Real company context — who uses this, and why they chose it</td></tr>
-<tr><td align="center"><b>6️⃣ 🎯 TRAP</b></td><td>The exact interview question this topic tends to generate</td></tr>
+<tr><td width="20%" align="center"><b>WHAT</b></td><td>Plain-language definition — no jargon assumed</td></tr>
+<tr><td align="center"><b>WHY</b></td><td>The real production/business problem it solved, and at which company</td></tr>
+<tr><td align="center"><b>HOW</b></td><td>Mechanics, with real code — not toy pseudocode</td></tr>
+<tr><td align="center"><b>THEN vs NOW</b></td><td>Legacy tool ↔ modern tool, mapped side by side</td></tr>
+<tr><td align="center"><b>WHO</b></td><td>Real company context — who uses this, and why they chose it</td></tr>
+<tr><td align="center"><b>TRAP</b></td><td>The exact interview question this topic tends to generate</td></tr>
 </table>
 
 <br/>
 
-## 📊 What's Inside (at a glance)
+## What's Inside (at a glance)
 
 <div align="center">
 
-| 🧠 Knowledge | 🛠️ Practical | 🚀 Career |
+| Knowledge | Practical | Career |
 |:---:|:---:|:---:|
 | 16 Modules | 6 Full End-to-End Projects | 1 Golden System-Design Module |
 | 200+ Files | Real Runnable Code Everywhere | 300+ Interview Questions |
@@ -53,7 +53,7 @@ This handbook was built to close that gap — **one consistent pattern, repeated
 
 <br/>
 
-## 🗺️ Your Learning Journey
+## Your Learning Journey
 
 ```mermaid
 flowchart TD
@@ -79,15 +79,15 @@ flowchart TD
 ```
 
 <div align="center">
-<sub>🏆 Pink = the "Golden Module" that separates a Data Engineer from a Senior/Architect &nbsp;|&nbsp; 🟢 Green = the 2026 AI frontier</sub>
+<sub> Pink = the "Golden Module" that separates a Data Engineer from a Senior/Architect &nbsp;|&nbsp; 🟢 Green = the 2026 AI frontier</sub>
 </div>
 
 <br/>
 
-## 📚 All 16 Modules
+## All 16 Modules
 
 <details open>
-<summary><b>🧱 Foundations</b> — Modules 01-05</summary>
+<summary><b>Foundations</b> — Modules 01-05</summary>
 <br/>
 
 | # | Module | Covers |
@@ -115,7 +115,7 @@ flowchart TD
 </details>
 
 <details open>
-<summary><b>🏆 Judgment & Career</b> — Modules 11-14</summary>
+<summary><b>Judgment & Career</b> — Modules 11-14</summary>
 <br/>
 
 | # | Module | Covers |
@@ -128,7 +128,7 @@ flowchart TD
 </details>
 
 <details open>
-<summary><b>🔮 2026 Frontier</b> — Modules 15-16</summary>
+<summary><b>2026 Frontier</b> — Modules 15-16</summary>
 <br/>
 
 | # | Module | Covers |
@@ -140,7 +140,7 @@ flowchart TD
 
 <br/>
 
-## 🧭 Find Your Path
+## Find Your Path
 
 ```mermaid
 flowchart LR
@@ -157,24 +157,24 @@ flowchart LR
 
 <br/>
 
-## 🏢 Built on Real Company Reasoning, Not Just Theory
+## Built on Real Company Reasoning, Not Just Theory
 
 <div align="center">
 
 | Company | What They Built & Why (covered in-depth) |
 |---|---|
-| 🎬 **Netflix** | Apache Iceberg, Chaos Monkey — module 06, 07 |
-| 🚕 **Uber** | Apache Hudi, Schemaless — module 06, 05 |
-| 💼 **LinkedIn** | Apache Kafka — module 06, 08 |
-| 🏠 **Airbnb** | Apache Airflow, Superset — module 08, 09 |
-| 🅿️ **Meta** | Presto, RocksDB, TAO — module 06, 05 |
-| 💳 **Capital One** | Full cloud migration in a regulated industry — module 07 |
+| **Netflix** | Apache Iceberg, Chaos Monkey — module 06, 07 |
+| **Uber** | Apache Hudi, Schemaless — module 06, 05 |
+| **LinkedIn** | Apache Kafka — module 06, 08 |
+| **Airbnb** | Apache Airflow, Superset — module 08, 09 |
+| **Meta** | Presto, RocksDB, TAO — module 06, 05 |
+| **Capital One** | Full cloud migration in a regulated industry — module 07 |
 
 </div>
 
 <br/>
 
-## 🚀 Get Started
+## Get Started
 
 ```bash
 git clone https://github.com/Ritik2703/Data-Engineering-Handbook-Mastery-From-Beginner-to-Production.git
@@ -184,7 +184,7 @@ open ROADMAP.md   # start here
 
 <br/>
 
-## 📖 Additional resources
+## Additional resources
 
 | File | Purpose |
 |---|---|
@@ -195,7 +195,7 @@ open ROADMAP.md   # start here
 
 <br/>
 
-## 🤝 Contributing
+## Contributing
 
 PRs are genuinely welcome. See [`CONTRIBUTING.md`](./CONTRIBUTING.md) — this repo follows one consistent pattern (concept → why it matters → how it works → legacy vs modern → real company context → interview traps) that new contributions should match.
 
@@ -207,7 +207,7 @@ If this repo genuinely helped you learn, land an interview, or level up — a �
 
 <br/>
 
-## 📜 License
+## License
 
 MIT — use freely, attribution appreciated.
 
@@ -219,6 +219,6 @@ MIT — use freely, attribution appreciated.
 
 *"Knowledge shared freely returns multiplied — build with patience, teach with generosity, and let the work speak for itself."*
 
-📘 Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
+Compiled with dedication by **[Ritik2703](https://github.com/Ritik2703)** — Data Engineering Handbook: Beginner to Production
 
 </div>
